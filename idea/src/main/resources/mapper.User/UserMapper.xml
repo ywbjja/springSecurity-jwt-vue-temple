@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <insert id="add">
+		insert into User(id,username,password)
+		values(#{id},#{username},#{password})
+ 	</insert>
+
+    <delete id="delById">
+		delete from User where user_id=#{user_id}
+	</delete>
+
+    <update id="updateById">
+        update User
+        <set>
+            <if test="id != null">id=#{id},</if>
+            <if test="username != null">username=#{username},</if>
+            <if test="password != null">password=#{password}</if>
+        </set>
+        where user_id=#{user_id}
+    </update>
+
+    <select id="queryById" resultType="com.example.demo.entity.User">
+		select * from User where user_id=#{user_id}
+	</select>
+
+    <select id="joinMapById" resultType="Map">
+		select * from User where user_id=#{user_id}
+	</select>
+
+    <select id="queryAll" resultType="com.example.demo.entity.User">
+		select * from User order by user_id desc
+	</select>
+
+    <select id="queryListByCond" resultType="Map">
+        select * from User
+        <where>
+            <if test="keyName != null"> user_name like "%"#{keyName}"%"</if>
+        </where>
+        order by user_id desc
+    </select>
+
+    <select id="queryByUserName" resultType="com.example.demo.entity.User">
+        select * from User wehre username = #{username}
+    </select>
+
+</mapper>
