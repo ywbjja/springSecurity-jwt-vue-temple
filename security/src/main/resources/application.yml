@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+jwt:
+  header: jwtHeader
+  secret: eyJleHAiOjE1NDMyMDUyODUsInN1YiI6ImFkbWluIiwiY3JlYXRlZCI6MTU0MDYxMzI4N
+  expiration: 3600000   #毫秒
+  route:
+    login: /auth/login
+    refresh: /auth/refresh
+    register: /auth/register
+#mybatis配置
+mybatis:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: com.example.security.entity
+server:
+  port: 8089
