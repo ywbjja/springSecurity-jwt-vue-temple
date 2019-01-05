@@ -392,4 +392,5 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 ```
 目前基本的都已经完成了剩下的就是一些`entity,controller`的代码了具体可以看我[GitHub](https://github.com/ywbjja/springSecurityDemo)上的代码。
 下载项目到本地，然后改一下mysql的数据库信息，运行就可以看到返回的token数据了
+![image](https://github.com/ywbjja/springSecurityDemo/blob/master/images/QQ截图20190105230741.png)
 如果有任何见解或者我有写错的地方可以联系我...我一定改...
