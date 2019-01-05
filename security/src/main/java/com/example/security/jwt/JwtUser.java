@@ -48,16 +48,19 @@ public class JwtUser implements UserDetails {
         return authorities;
     }
 
+    //账户是否未过期
     @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    //账户是否未被锁
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
+
 
 
     @JsonIgnore
@@ -66,6 +69,8 @@ public class JwtUser implements UserDetails {
         return true;
     }
 
+
+    //是否启用
     @JsonIgnore
     @Override
     public boolean isEnabled() {

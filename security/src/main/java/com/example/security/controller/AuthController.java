@@ -3,10 +3,13 @@ package com.example.security.controller;
 import com.example.security.service.UserService;
 import com.example.security.util.RetResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+import javax.naming.Name;
 import java.util.Map;
 
 /**
@@ -16,6 +19,7 @@ import java.util.Map;
  */
 @RestController
 public class AuthController {
+
 
     @Autowired
     private UserService userService;
