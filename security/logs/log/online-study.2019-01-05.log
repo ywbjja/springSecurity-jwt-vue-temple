@@ -2372,3 +2372,355 @@ Consider defining a bean of type 'com.example.security.service.UserService' in y
 【xkcoding】2019-01-05 22:32:55.363 DEBUG [http-nio-8089-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@7da68828] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@76911385]
 【xkcoding】2019-01-05 22:32:55.363 DEBUG [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 【xkcoding】2019-01-05 22:32:55.363 DEBUG [http-nio-8089-exec-1] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-05 23:05:39.105 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+【xkcoding】2019-01-05 23:05:39.110 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletContextInitParams' with lowest search precedence
+【xkcoding】2019-01-05 23:05:39.110 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+【xkcoding】2019-01-05 23:05:39.110 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+【xkcoding】2019-01-05 23:05:39.111 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+【xkcoding】2019-01-05 23:05:39.244 INFO  [main] c.e.security.SecurityApplication - Starting SecurityApplication on DESKTOP-GHH329T with PID 15220 (C:\Users\37155\Documents\GitHub\springSecurityDemo\security\target\classes started by BBBB in C:\Users\37155\Documents\GitHub\springSecurityDemo\security)
+【xkcoding】2019-01-05 23:05:39.321 INFO  [main] c.e.security.SecurityApplication - The following profiles are active: dev
+【xkcoding】2019-01-05 23:05:39.477 INFO  [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:05:39 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:05:39.928 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+【xkcoding】2019-01-05 23:05:42.432 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application-dev.yml]' with search precedence immediately lower than 'applicationConfigurationProperties'
+【xkcoding】2019-01-05 23:05:42.432 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application.yml]' with search precedence immediately lower than 'applicationConfig: [classpath:/application-dev.yml]'
+【xkcoding】2019-01-05 23:05:42.432 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'applicationConfigurationProperties'
+【xkcoding】2019-01-05 23:05:42.432 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'defaultProperties'
+【xkcoding】2019-01-05 23:05:43.398 INFO  [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+【xkcoding】2019-01-05 23:05:43.412 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2019-01-05 23:05:43.414 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+【xkcoding】2019-01-05 23:05:43.666 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2019-01-05 23:05:43.666 DEBUG [localhost-startStop-1] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2019-01-05 23:05:43.666 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4190 ms
+【xkcoding】2019-01-05 23:05:44.143 ERROR [localhost-startStop-1] o.s.b.c.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationTokenFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtUserDetailsServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [C:\Users\37155\Documents\GitHub\springSecurityDemo\security\target\classes\com\example\security\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database url for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+【xkcoding】2019-01-05 23:05:44.189 WARN  [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+【xkcoding】2019-01-05 23:05:44.200 INFO  [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+【xkcoding】2019-01-05 23:05:44.209 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database url for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+【xkcoding】2019-01-05 23:06:07.563 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+【xkcoding】2019-01-05 23:06:07.581 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletContextInitParams' with lowest search precedence
+【xkcoding】2019-01-05 23:06:07.581 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+【xkcoding】2019-01-05 23:06:07.581 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+【xkcoding】2019-01-05 23:06:07.581 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+【xkcoding】2019-01-05 23:06:07.670 INFO  [main] c.e.security.SecurityApplication - Starting SecurityApplication on DESKTOP-GHH329T with PID 15020 (C:\Users\37155\Documents\GitHub\springSecurityDemo\security\target\classes started by BBBB in C:\Users\37155\Documents\GitHub\springSecurityDemo\security)
+【xkcoding】2019-01-05 23:06:07.672 INFO  [main] c.e.security.SecurityApplication - The following profiles are active: dev
+【xkcoding】2019-01-05 23:06:07.804 INFO  [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:06:07 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:06:08.236 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+【xkcoding】2019-01-05 23:06:09.756 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application-dev.yml]' with search precedence immediately lower than 'applicationConfigurationProperties'
+【xkcoding】2019-01-05 23:06:09.757 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application.yml]' with search precedence immediately lower than 'applicationConfig: [classpath:/application-dev.yml]'
+【xkcoding】2019-01-05 23:06:09.757 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'applicationConfigurationProperties'
+【xkcoding】2019-01-05 23:06:09.757 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'defaultProperties'
+【xkcoding】2019-01-05 23:06:10.533 INFO  [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+【xkcoding】2019-01-05 23:06:10.546 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2019-01-05 23:06:10.547 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+【xkcoding】2019-01-05 23:06:10.700 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2019-01-05 23:06:10.700 DEBUG [localhost-startStop-1] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2019-01-05 23:06:10.700 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2896 ms
+【xkcoding】2019-01-05 23:06:11.119 ERROR [localhost-startStop-1] o.s.b.c.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationTokenFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtUserDetailsServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [C:\Users\37155\Documents\GitHub\springSecurityDemo\security\target\classes\com\example\security\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.tomcat.jdbc.pool.DataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Cannot determine embedded database url for database type NONE. If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+【xkcoding】2019-01-05 23:06:11.154 WARN  [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+【xkcoding】2019-01-05 23:06:11.165 INFO  [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+【xkcoding】2019-01-05 23:06:11.173 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database url for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (the profiles "dev" are currently active).
+
+【xkcoding】2019-01-05 23:06:54.926 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+【xkcoding】2019-01-05 23:06:54.930 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletContextInitParams' with lowest search precedence
+【xkcoding】2019-01-05 23:06:54.930 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+【xkcoding】2019-01-05 23:06:54.931 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+【xkcoding】2019-01-05 23:06:54.931 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+【xkcoding】2019-01-05 23:06:55.035 INFO  [main] c.e.security.SecurityApplication - Starting SecurityApplication on DESKTOP-GHH329T with PID 14876 (C:\Users\37155\Documents\GitHub\springSecurityDemo\security\target\classes started by BBBB in C:\Users\37155\Documents\GitHub\springSecurityDemo\security)
+【xkcoding】2019-01-05 23:06:55.039 INFO  [main] c.e.security.SecurityApplication - The following profiles are active: dev
+【xkcoding】2019-01-05 23:06:55.217 INFO  [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:06:55 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:06:55.612 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+【xkcoding】2019-01-05 23:06:56.755 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application-dev.yml]' with search precedence immediately lower than 'applicationConfigurationProperties'
+【xkcoding】2019-01-05 23:06:56.756 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application.yml]' with search precedence immediately lower than 'applicationConfig: [classpath:/application-dev.yml]'
+【xkcoding】2019-01-05 23:06:56.756 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'applicationConfigurationProperties'
+【xkcoding】2019-01-05 23:06:56.756 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'defaultProperties'
+【xkcoding】2019-01-05 23:06:57.740 INFO  [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8089 (http)
+【xkcoding】2019-01-05 23:06:57.751 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2019-01-05 23:06:57.752 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+【xkcoding】2019-01-05 23:06:57.987 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2019-01-05 23:06:57.987 DEBUG [localhost-startStop-1] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2019-01-05 23:06:57.987 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2770 ms
+【xkcoding】2019-01-05 23:06:59.918 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+【xkcoding】2019-01-05 23:06:59.918 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+【xkcoding】2019-01-05 23:06:59.918 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+【xkcoding】2019-01-05 23:06:59.918 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+【xkcoding】2019-01-05 23:06:59.922 INFO  [localhost-startStop-1] o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+【xkcoding】2019-01-05 23:06:59.922 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'jwtAuthenticationTokenFilter' to: [/*]
+【xkcoding】2019-01-05 23:06:59.922 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+【xkcoding】2019-01-05 23:06:59.922 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+【xkcoding】2019-01-05 23:06:59.951 DEBUG [localhost-startStop-1] o.s.web.filter.CorsFilter - Initializing filter 'corsFilter'
+【xkcoding】2019-01-05 23:06:59.951 DEBUG [localhost-startStop-1] o.s.web.filter.CorsFilter - Filter 'corsFilter' configured successfully
+【xkcoding】2019-01-05 23:06:59.964 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+【xkcoding】2019-01-05 23:07:00.336 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3068b369, org.springframework.security.web.context.SecurityContextPersistenceFilter@49096b06, org.springframework.security.web.header.HeaderWriterFilter@411291e5, org.springframework.security.web.authentication.logout.LogoutFilter@389562d6, com.example.security.jwt.JwtAuthenticationTokenFilter@4a179634, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40226788, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e6f3bae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17ca8b92, org.springframework.security.web.session.SessionManagementFilter@6b7d1df8, org.springframework.security.web.access.ExceptionTranslationFilter@2375b321, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41477a6d]
+【xkcoding】2019-01-05 23:07:00.953 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:06:55 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:07:01.072 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:06:55 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:07:01.092 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 1 request handler methods found on class com.example.security.controller.AuthController: {public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map)={[/auth/login]}}
+【xkcoding】2019-01-05 23:07:01.095 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/auth/login]}" onto public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)
+【xkcoding】2019-01-05 23:07:01.106 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 request handler methods found on class org.springframework.boot.autoconfigure.web.BasicErrorController: {public org.springframework.http.ResponseEntity org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)={[/error]}, public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)={[/error],produces=[text/html]}}
+【xkcoding】2019-01-05 23:07:01.106 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+【xkcoding】2019-01-05 23:07:01.107 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+【xkcoding】2019-01-05 23:07:01.202 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:06:55 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:07:01.202 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalRequiredAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalCommonAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.event.internalEventListenerProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.event.internalEventListenerFactory': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'securityApplication': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'webSecurity': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'authController': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.203 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jwtAuthenticationTokenFilter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jwtTokenUtil': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jwtUserDetailsServiceImpl': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'userServiceImpl': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'objectPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'authenticationManagerBuilder': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.204 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'enableGlobalAuthenticationAutowiredConfigurer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'initializeUserDetailsBeanManagerConfigurer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'initializeAuthenticationProviderBeanManagerConfigurer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'delegatingApplicationListener': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'webSecurityExpressionHandler': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springSecurityFilterChain': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.205 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'privilegeEvaluator': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.206 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'autowiredWebSecurityConfigurersIgnoreParents': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.206 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.206 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestDataValueProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.206 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.206 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'methodSecurityInterceptor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.206 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'methodSecurityMetadataSource': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'preInvocationAuthorizationAdvice': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.authenticationManager': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'passwordEncoder': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'corsFilter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'metaDataSourceAdvisor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.aop.config.internalAutoProxyCreator': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.AutoConfigurationPackages': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'userMapper': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.208 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.209 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'propertySourcesPlaceholderConfigurer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.209 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.209 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'standardJacksonObjectMapperBuilderCustomizer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.209 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.209 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.209 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.215 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.215 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jacksonObjectMapperBuilder': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.215 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.216 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jacksonObjectMapper': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.217 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.217 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jsonComponentModule': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.217 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.217 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'websocketContainerCustomizer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'tomcatEmbeddedServletContainerFactory': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'embeddedServletContainerCustomizerBeanPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'errorPageRegistrarBeanPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dispatcherServlet': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.218 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dispatcherServletRegistration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.219 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.220 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.220 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'defaultValidator': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.220 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'methodValidationPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.221 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'error': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'beanNameViewResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'conventionErrorViewResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'errorAttributes': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'basicErrorController': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'errorPageCustomizer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'preserveErrorControllerTargetClassPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.222 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestMappingHandlerAdapter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestMappingHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcValidator': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcPathMatcher': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcUrlPathHelper': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'viewControllerHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'beanNameHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'resourceHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.223 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcResourceUrlProvider': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'defaultServletHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcConversionService': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcUriComponentsContributor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'httpRequestHandlerAdapter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'simpleControllerHandlerAdapter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'handlerExceptionResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcViewResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcHandlerMappingIntrospector': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'faviconHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'faviconRequestHandler': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'defaultViewResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'viewResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'welcomePageHandlerMapping': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestContextFilter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.224 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'hiddenHttpMethodFilter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'httpPutFormContentFilter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dataSource': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'tomcatPoolDataSourceMetadataProvider': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.225 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dataSourceInitializer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dataSourceInitializerPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'sqlSessionFactory': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'sqlSessionTemplate': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mbeanExporter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'objectNamingStrategy': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mbeanServer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.226 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.228 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springApplicationAdminRegistrar': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.236 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.237 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.238 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'persistenceExceptionTranslationPostProcessor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.238 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'stringHttpMessageConverter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mappingJackson2HttpMessageConverter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'messageConverters': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.security.BootGlobalAuthenticationConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'bootGlobalAuthenticationConfigurationAdapter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.239 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'authenticationEventPublisher': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.240 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'securityProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.240 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.240 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.240 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.240 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionManager': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.240 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.241 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.242 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jdbcTemplate': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.245 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'namedParameterJdbcTemplate': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.transaction.config.internalTransactionAdvisor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionAttributeSource': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionInterceptor': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.transaction.config.internalTransactionalEventListenerFactory': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.246 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionTemplate': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'platformTransactionManagerCustomizers': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'securityFilterChainRegistration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'characterEncodingFilter': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'localeCharsetMappingsCustomizer': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'multipartConfigElement': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'multipartResolver': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.248 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'serverProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'duplicateServerPropertiesDetector': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'restTemplateBuilder': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'autoConfigurationReport': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springApplicationArguments': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springBootBanner': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springBootLoggingSystem': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'environment': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'systemProperties': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'systemEnvironment': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'messageSource': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'applicationEventMulticaster': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'servletContext': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'contextParameters': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.249 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'contextAttributes': no URL paths identified
+【xkcoding】2019-01-05 23:07:01.318 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【xkcoding】2019-01-05 23:07:01.319 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【xkcoding】2019-01-05 23:07:01.361 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Looking for exception mappings: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Sat Jan 05 23:06:55 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-05 23:07:01.405 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【xkcoding】2019-01-05 23:07:01.827 INFO  [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+【xkcoding】2019-01-05 23:07:01.842 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Looking for resource handler mappings
+【xkcoding】2019-01-05 23:07:01.843 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Found resource handler mapping: URL pattern="/**/favicon.ico", locations=[ServletContext resource [/], class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], class path resource []], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@2ab2710]
+【xkcoding】2019-01-05 23:07:01.843 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Found resource handler mapping: URL pattern="/webjars/**", locations=[class path resource [META-INF/resources/webjars/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@253b380a]
+【xkcoding】2019-01-05 23:07:01.843 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Found resource handler mapping: URL pattern="/**", locations=[ServletContext resource [/], class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@29c2c826]
+【xkcoding】2019-01-05 23:07:01.850 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+【xkcoding】2019-01-05 23:07:01.862 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+【xkcoding】2019-01-05 23:07:01.877 INFO  [main] o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+【xkcoding】2019-01-05 23:07:01.907 INFO  [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8089 (http)
+【xkcoding】2019-01-05 23:07:01.908 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'server.ports' with highest search precedence
+【xkcoding】2019-01-05 23:07:01.913 INFO  [main] c.e.security.SecurityApplication - Started SecurityApplication in 7.853 seconds (JVM running for 9.771)
+【xkcoding】2019-01-05 23:07:07.796 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Initializing servlet 'dispatcherServlet'
+【xkcoding】2019-01-05 23:07:07.797 INFO  [http-nio-8089-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+【xkcoding】2019-01-05 23:07:07.797 INFO  [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+【xkcoding】2019-01-05 23:07:07.797 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Using MultipartResolver [org.springframework.web.multipart.support.StandardServletMultipartResolver@48f11d6f]
+【xkcoding】2019-01-05 23:07:07.806 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@1a87e080]
+【xkcoding】2019-01-05 23:07:07.818 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@1447a2fc]
+【xkcoding】2019-01-05 23:07:07.831 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@18860534]
+【xkcoding】2019-01-05 23:07:07.847 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@5c896aa2]
+【xkcoding】2019-01-05 23:07:07.848 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Published WebApplicationContext of servlet 'dispatcherServlet' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet]
+【xkcoding】2019-01-05 23:07:07.848 INFO  [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+【xkcoding】2019-01-05 23:07:07.848 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Servlet 'dispatcherServlet' configured successfully
+【xkcoding】2019-01-05 23:07:07.869 INFO  [http-nio-8089-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-05 23:07:07.869 INFO  [http-nio-8089-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-05 23:07:07.879 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-05 23:07:07.883 DEBUG [http-nio-8089-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-05 23:07:07.885 DEBUG [http-nio-8089-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-05 23:07:07.935 DEBUG [http-nio-8089-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@726a17c4]
+【xkcoding】2019-01-05 23:07:09.298 DEBUG [http-nio-8089-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-05 23:07:09.328 DEBUG [http-nio-8089-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-05 23:07:09.360 DEBUG [http-nio-8089-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-05 23:07:09.492 DEBUG [http-nio-8089-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-05 23:07:09.492 DEBUG [http-nio-8089-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-05 23:07:09.502 DEBUG [http-nio-8089-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-05 23:07:10.147 DEBUG [http-nio-8089-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@70b84915] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@726a17c4]
+【xkcoding】2019-01-05 23:07:10.148 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-05 23:07:10.148 DEBUG [http-nio-8089-exec-2] o.s.web.servlet.DispatcherServlet - Successfully completed request
