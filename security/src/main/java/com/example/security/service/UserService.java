@@ -27,5 +27,12 @@ public interface UserService {
     User findByUsername(String username);
     RetResult login(String username, String password);
 
+    /**
+     * 获取菜单树
+     * @param username
+     * @return
+     */
+    RetResult getMenuTree(String username);
+
 
 }
