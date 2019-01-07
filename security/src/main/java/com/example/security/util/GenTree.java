@@ -1,6 +1,7 @@
 package com.example.security.util;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,6 +24,7 @@ public class GenTree {
         //遍历数据
         nodes.forEach(menu -> {
             //当父id是0的时候应该是根节点
+            System.out.println(menu.getPer_paerent_id());
             if(menu.getPer_paerent_id() == 0){
                 root.add(menu);
             }
@@ -50,10 +52,25 @@ public class GenTree {
                 if(menu.getChildren() == null){
                     menu.setChildren(new ArrayList<Menu>());
                 }
-                menu.getChildren().add(genChildren(menu,nodes));
+                menu.getChildren().add(genChildren(menu1,nodes));
             }
         }
         //返回数据
         return menu;
+    }
+
+    public static void main(String[] args) {
+        Set<Menu> set = new HashSet<>();
+        set.addAll(Arrays.asList(
+                new Menu(1,0,"",""),
+                new Menu(2,1,"",""),
+                new Menu(3,1,"",""),
+                new Menu(4,1,"","")
+
+
+        ));
+        for (Menu menu:genRoot(set)){
+            System.out.println(menu);
+        }
     }
 }

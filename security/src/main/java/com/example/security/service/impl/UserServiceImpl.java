@@ -85,7 +85,7 @@ public class UserServiceImpl implements UserService {
                 }
             });
         });
-        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功");
+        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功",GenTree.genRoot(menus));
     }
 
 
