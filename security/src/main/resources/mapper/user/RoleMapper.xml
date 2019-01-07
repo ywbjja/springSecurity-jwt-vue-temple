@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.security.mapper.UserMapper">
+
+    <resultMap id="PerResultMap" type="com.example.security.entity.Role">
+        <id column="id" jdbcType="Integer" property="id" />
+        <result column="rolename" jdbcType="VARCHAR" property="rolename" />
+        <collection property="permissions" ofType="Permission">
+            <id column="per_id" property="per_id"/>
+            <result column="per_name" property="per_name"/>
+            <result column="per_resource" property="per_resource"/>
+            <result column="per_describe" property="per_describe"/>
+            <result column="per_parent_id" property="per_parent_id"/>
+            <result column="per_type" property="per_type"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectByUserName" parameterType="String" resultMap="PerResultMap">
+        select Role.id,Role.rolename,Permission.per_id,Permission.per_name,Permission.per_resource,
+        Permission.per_describe,Permission.per_parent_id,Permission.per_type
+        from User LEFT JOIN RoleUser ru on ru.userId  = `User`.id
+        LEFT JOIN Role on Role.id = ru.roleId
+        LEFT JOIN RolePermission on RolePermission.rp_role_id = Role.id
+        LEFT JOIN Permission on Permission.per_id = RolePermission.rp_per_id
+        where `User`.username = #{username}
+    </select>
+</mapper>

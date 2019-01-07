@@ -3,6 +3,7 @@ package com.example.security.entity;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.Set;
 
 /**
  * @Autoor:杨文彬
@@ -24,5 +25,6 @@ public class Role {
 
     private Date addTime;
 
-    // 权限列表
+    //权限的列表
+    private Set<Permission> permissions;
 }

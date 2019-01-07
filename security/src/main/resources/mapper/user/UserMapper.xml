@@ -2,33 +2,7 @@
 <!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.security.mapper.UserMapper">
 
-    <!--<resultMap id="BaseResultMap" type="com.example.security.entity.User">-->
-        <!--<id column="uid" jdbcType="VARCHAR" property="uid" />-->
-        <!--<result column="avatar" jdbcType="VARCHAR" property="avatar" />-->
-        <!--<result column="username" jdbcType="VARCHAR" property="username" />-->
-        <!--<result column="nickname" jdbcType="VARCHAR" property="nickname" />-->
-        <!--<result column="password" jdbcType="VARCHAR" property="password" />-->
-        <!--<result column="phone" jdbcType="VARCHAR" property="phone" />-->
-        <!--<result column="mail" jdbcType="VARCHAR" property="mail" />-->
-        <!--<result column="state" jdbcType="INTEGER" property="state" />-->
-        <!--<result column="add_time" jdbcType="TIMESTAMP" property="addTime" />-->
-        <!--<result column="up_time" jdbcType="TIMESTAMP" property="upTime" />-->
-        <!--<result column="dept" jdbcType="INTEGER" property="dept" />-->
-        <!--<collection property="roles" ofType="Role">-->
-            <!--<id column="rid" property="rid"/>-->
-            <!--<result column="name" property="name"/>-->
-        <!--</collection>-->
-    <!--</resultMap>-->
-    <!--&lt;!&ndash; SysUser selectByUserName(String username) &ndash;&gt;-->
-    <!--<select id="selectByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">-->
-        <!--select tsu.uid,tsu.avatar,tsu.nickname,tsu.password,tsu.username-->
-        <!--,tsu.phone,tsu.mail,tsu.state,tsu.add_time,tsu.up_time,tsu.dept,-->
-        <!--tsr.rid,tsr.name-->
-        <!--from t_sys_user AS tsu-->
-        <!--LEFT JOIN t_sys_user_role AS tsur ON tsur.user_uid = tsu.uid-->
-        <!--LEFT JOIN t_sys_role AS tsr ON tsr.rid = tsur.role_rid-->
-        <!--where tsu.username = #{username,jdbcType=VARCHAR}-->
-    <!--</select>-->
+
 
     <resultMap id="BaseResultMap" type="com.example.security.entity.User">
         <id column="id" jdbcType="VARCHAR" property="id" />
