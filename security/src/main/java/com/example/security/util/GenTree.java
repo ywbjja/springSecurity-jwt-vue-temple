@@ -45,7 +45,7 @@ public class GenTree {
         //遍历传过来的数据
         for (Menu menu1 :nodes){
             //如果数据中的父id和上面的per_id一致应该就放children中去
-            if(menu1.getPer_paerent_id().equals(menu.getPer_id())){
+            if(menu.getPer_id().equals(menu1.getPer_paerent_id())){
                 //如果当前节点的子节点是空的则初始化，如果不为空就加进去
                 if(menu.getChildren() == null){
                     menu.setChildren(new ArrayList<Menu>());

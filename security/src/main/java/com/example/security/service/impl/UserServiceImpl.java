@@ -76,12 +76,16 @@ public class UserServiceImpl implements UserService {
             //遍历权限
             role.getPermissions().forEach( permission -> {
                 if (permission.getPer_type().equals("menu")){
+                    log.info(permission.getPer_name());
                     menus.add(new Menu(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
                             permission.getPer_resource()));
+                    for (Menu menu:menus){
+                        System.out.println(menu);
+                    }
                 }
             });
         });
-        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功", GenTree.genRoot(menus));
+        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功");
     }
 
 

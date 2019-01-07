@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.security.mapper.UserMapper">
+<mapper namespace="com.example.security.mapper.RoleMapper">
 
     <resultMap id="PerResultMap" type="com.example.security.entity.Role">
-        <id column="id" jdbcType="Integer" property="id" />
-        <result column="rolename" jdbcType="VARCHAR" property="rolename" />
+        <id column="id"  property="id" />
+        <result column="rolename"  property="rolename" />
         <collection property="permissions" ofType="Permission">
             <id column="per_id" property="per_id"/>
             <result column="per_name" property="per_name"/>

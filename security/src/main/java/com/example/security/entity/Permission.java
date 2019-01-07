@@ -19,7 +19,7 @@ public class Permission {
     private String per_resource;
     private String per_type;
     private String per_icon;
-    private String describe;
+    private String per_describe;
     private Set<Permission> children;
 
 
