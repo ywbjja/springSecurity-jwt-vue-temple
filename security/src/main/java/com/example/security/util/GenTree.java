@@ -19,7 +19,6 @@ public class GenTree {
      * @return
      */
     public static Set<Menu> genRoot(Set<Menu> nodes){
-        //这个是根节点
         Set<Menu> root = new HashSet<>();
         //遍历数据
         nodes.forEach(menu -> {
@@ -29,7 +28,7 @@ public class GenTree {
                 root.add(menu);
             }
         });
-        //这里是遍历根节点然后看有没有子节点
+        //这里是子节点的创建方法
         root.forEach(menu -> {
             genChildren(menu,nodes);
         });

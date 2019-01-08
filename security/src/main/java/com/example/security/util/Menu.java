@@ -16,9 +16,6 @@ public class Menu {
     private String per_name;
     private String per_resource;
     private List<Menu> children;
-    public Menu(){
-
-    }
     public Menu(Integer per_id,Integer per_paerent_id,String per_name,String per_resource){
         this.per_id = per_id;
         this.per_paerent_id = per_paerent_id;

@@ -14,4 +14,4 @@ mybatis:
   mapper-locations: classpath*:mapper/**/*Mapper.xml
   type-aliases-package: com.example.security.entity
 server:
-  port: 8089
+  port: 8085

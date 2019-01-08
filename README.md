@@ -1,5 +1,6 @@
 # springSecurityDemo
 # 如果对你有帮助，希望可以点个Star支持一下~
+[Spring Security (二):获取菜单树](#jump_ss2)
 >违背的青春
 
 
@@ -395,3 +396,93 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 下载项目到本地，然后改一下mysql的数据库信息，运行就可以看到返回的token数据了
 ![image](https://github.com/ywbjja/springSecurityDemo/blob/master/images/QQ截图20190105230741.png)
 如果有任何见解或者我有写错的地方可以联系我...我一定改...
+<a id="jump_ss2">Spring Security (二):获取菜单树</a>
+
+今天说下登录后获取用户菜单，流程就是根据用户的`token`然后通过`SecurityContextHolder`来获取用户信息，根据用户来查询菜单树，其实最主要的就是怎么把后台查询出的数据转换成树形菜单，其实也不难，前后端都可以做，因为树形还是比较常见的所以可以做成一个通用的类来使用，使用时只需要传入数据就好了。
+### GenTree
+
+这个就是把数据转成树形的方法了。
+```
+    public class GenTree {
+
+
+    /**
+     * 递归根节点
+     * @param nodes
+     * @return
+     */
+    public static Set<Menu> genRoot(Set<Menu> nodes){
+        Set<Menu> root = new HashSet<>();
+        //遍历数据
+        nodes.forEach(menu -> {
+            //当父id是0的时候应该是根节点
+            System.out.println(menu.getPer_paerent_id());
+            if(menu.getPer_paerent_id() == 0){
+                root.add(menu);
+            }
+        });
+        //这里是子节点的创建方法
+        root.forEach(menu -> {
+            genChildren(menu,nodes);
+        });
+        //返回数据
+        return root;
+    }
+
+    /**
+     * 递归子节点
+     * @param menu
+     * @param nodes
+     * @return
+     */
+    private static Menu genChildren(Menu menu, Set<Menu> nodes) {
+        //遍历传过来的数据
+        for (Menu menu1 :nodes){
+            //如果数据中的父id和上面的per_id一致应该就放children中去
+            if(menu.getPer_id().equals(menu1.getPer_paerent_id())){
+                //如果当前节点的子节点是空的则初始化，如果不为空就加进去
+                if(menu.getChildren() == null){
+                    menu.setChildren(new ArrayList<Menu>());
+                }
+                menu.getChildren().add(genChildren(menu1,nodes));
+            }
+        }
+        //返回数据
+        return menu;
+    }
+
+   
+}
+```
+上面的方法其实也就是几个`forEach`，递归判断，放入数据。
+其中Menu的代码如下，这个就是你要得到菜单的格式了，可以根据自己需要进行改造。
+```
+@Data
+public class Menu {
+    private Integer per_id;
+    private Integer per_paerent_id;
+    private String per_name;
+    private String per_resource;
+    private List<Menu> children;
+    public Menu(Integer per_id,Integer per_paerent_id,String per_name,String per_resource){
+        this.per_id = per_id;
+        this.per_paerent_id = per_paerent_id;
+        this.per_name = per_name;
+        this.per_resource = per_resource;
+    }
+}
+
+```
+
+然后就是`Mapper`、`Service`等的编写了，在`Controller`层中通过`SecurityContextHolder`来获得用户信息。
+```
+//使用Spring Security 获取用户信息
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+```
+其实之前的项目应该改一下，我把`token`放到`msg`里了，修改了一下，
+![](https://i.imgur.com/ifefJLq.png)
+然后我们就可以拿着这个`token`查询菜单树了，
+![](https://i.imgur.com/qf0Kvzo.png)
+代码已经更新到`github`上，有任何疑问可以联系我~
+
+![](https://i.imgur.com/G1gMHsi.jpg)
