@@ -15,7 +15,7 @@
     </resultMap>
 
     <select id="selectByUserName" parameterType="String" resultMap="BaseResultMap">
-        select `User`.username,`User`.`password` ,Role.rolename from User
+        select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User
         LEFT JOIN RoleUser on RoleUser.userId = `User`.id
         LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = #{username}
     </select>

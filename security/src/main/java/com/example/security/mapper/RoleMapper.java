@@ -10,5 +10,6 @@ import java.util.Set;
  * @Description：
  */
 public interface RoleMapper {
+
     Set<Role> selectByUserName(String username);
 }

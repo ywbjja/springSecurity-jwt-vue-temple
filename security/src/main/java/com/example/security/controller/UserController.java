@@ -25,6 +25,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value = "/getUserInfo")
+    public RetResult getUserInfo(@RequestBody(required = false) Map<String,Object>map){
+        //使用Spring Security 获取用户信息
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        log.info(userDetails.getUsername());
+        return userService.getUserInfo(userDetails.getUsername());
+    }
+
     @RequestMapping(value = "/queryMenuTree")
     public RetResult getMenuTree(@RequestBody(required = false) Map<String,Object> map){
         //使用Spring Security 获取用户信息

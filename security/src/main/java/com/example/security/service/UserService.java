@@ -24,8 +24,14 @@ import org.springframework.stereotype.Service;
  */
 
 public interface UserService {
+
+    
     User findByUsername(String username);
+
+
     RetResult login(String username, String password);
+
+    RetResult getUserInfo(String username);
 
     /**
      * 获取菜单树
