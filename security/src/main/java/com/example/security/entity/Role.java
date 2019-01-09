@@ -19,11 +19,6 @@ public class Role {
 
     private String rolename;
 
-    private Integer state;
-
-    private Date upTime;
-
-    private Date addTime;
 
     //权限的列表
     private Set<Permission> permissions;

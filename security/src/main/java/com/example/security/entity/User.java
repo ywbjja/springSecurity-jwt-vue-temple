@@ -13,27 +13,20 @@ import java.util.Set;
 @Data
 public class User {
 
-    private String uid;
+    private String id;
 
     private String avatar;
 
     private String username;
 
-    private String nickname;
-
     private String password;
 
     private String phone;
 
-    private String mail;
 
     private Integer state;
 
-    private Date addTime;
 
-    private Date upTime;
-
-    private Integer dept;
 
     private Set<Role> roles;
 }

@@ -6,10 +6,7 @@ import com.example.security.jwt.JwtTokenUtil;
 import com.example.security.mapper.RoleMapper;
 import com.example.security.mapper.UserMapper;
 import com.example.security.service.UserService;
-import com.example.security.util.GenTree;
-import com.example.security.util.Menu;
-import com.example.security.util.RetCode;
-import com.example.security.util.RetResult;
+import com.example.security.util.*;
 import com.sun.deploy.panel.TreeBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,21 +48,64 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
+    /**
+     * 获取用户信息
+     * @param username
+     * @return
+     */
     @Override
     public User findByUsername(String username) {
         User user = userMapper.selectByUserName(username);
         log.info("userserviceimpl"+user);
         return user;
     }
+
+    /**
+     * 登录方法
+     * @param username
+     * @param password
+     * @return
+     * @throws AuthenticationException
+     */
     @Override
     public RetResult login(String username, String password) throws AuthenticationException {
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(username, password);
         final Authentication authentication = authenticationManager.authenticate(upToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        return new RetResult(RetCode.SUCCESS.getCode(),jwtTokenUtil.generateToken(userDetails));
+        return new RetResult(RetCode.SUCCESS.getCode(),"登录成功",jwtTokenUtil.generateToken(userDetails));
     }
 
+    /**
+     * 获取用户信息，包括角色列表，权限资源，返回给前端使用
+     * @param username
+     * @return
+     */
+    @Override
+    public RetResult getUserInfo(String username) {
+        User user = userMapper.selectByUserName(username);
+        //查询出改用户下的角色和权限
+        Set<Role> roles = roleMapper.selectByUserName(username);
+        Set<Menu> menus = new HashSet<>();
+        roles.forEach( role -> {
+            role.getPermissions().forEach( permission -> {
+                //这里应该type为menu的，button目前还未添加
+                if(permission.getPer_type().equals("menu")){
+                    menus.add(new Menu(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
+                            permission.getPer_resource()));
+                }
+            });
+        });
+        UserVo userVo =new UserVo(user.getId(),user.getUsername(),user.getRoles(),GenTree.genRoot(menus));
+        return new RetResult(RetCode.SUCCESS.getCode(),userVo);
+
+    }
+
+    /**
+     * 获取菜单树
+     * @param username
+     * @return
+     */
     @Override
     public RetResult getMenuTree(String username) {
         //目前只做菜单权限以后增加按钮的权限控制

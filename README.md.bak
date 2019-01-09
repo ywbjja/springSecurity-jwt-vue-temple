@@ -1,11 +1,10 @@
 # springSecurity-jwt-vue-temple Demo
 # 如果对你有帮助，希望可以点个Star支持一下~
-[Spring Security (一):整合JWT](#jump_ss1)<br>
 [Spring Security (二):获取菜单树](#jump_ss2)
 >违背的青春
 
 
-<a id="jump_ss1">今天</a>写下`Spring Security`整合`jwt`的一个简单小`Demo`，目的是登录后实现返回`token`，其实整个过程很简单。
+今天写下`Spring Security`整合`jwt`的一个简单小`Demo`，目的是登录后实现返回`token`，其实整个过程很简单。
 ### 导入依赖
 ```
 <dependency>
@@ -396,10 +395,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 目前基本的都已经完成了剩下的就是一些`entity,controller`的代码了具体可以看我[GitHub](https://github.com/ywbjja/springSecurityDemo)上的代码。
 下载项目到本地，然后改一下mysql的数据库信息，运行就可以看到返回的token数据了
 ![image](https://github.com/ywbjja/springSecurityDemo/blob/master/images/QQ截图20190105230741.png)
-如果有任何见解或者我有写错的地方可以联系我...我一定改...<br>
+如果有任何见解或者我有写错的地方可以联系我...我一定改...
+<a id="jump_ss2">Spring Security (二):获取菜单树</a>
 
-
-<a id="jump_ss2">今天说下登录后获取用户菜单，</a>流程就是根据用户的`token`然后通过`SecurityContextHolder`来获取用户信息，根据用户来查询菜单树，其实最主要的就是怎么把后台查询出的数据转换成树形菜单，其实也不难，前后端都可以做，因为树形还是比较常见的所以可以做成一个通用的类来使用，使用时只需要传入数据就好了。
+今天说下登录后获取用户菜单，流程就是根据用户的`token`然后通过`SecurityContextHolder`来获取用户信息，根据用户来查询菜单树，其实最主要的就是怎么把后台查询出的数据转换成树形菜单，其实也不难，前后端都可以做，因为树形还是比较常见的所以可以做成一个通用的类来使用，使用时只需要传入数据就好了。
 ### GenTree
 
 这个就是把数据转成树形的方法了。
@@ -486,3 +485,4 @@ public class Menu {
 ![](https://i.imgur.com/qf0Kvzo.png)
 代码已经更新到`github`上，有任何疑问可以联系我~
 
+![](https://i.imgur.com/G1gMHsi.jpg)
