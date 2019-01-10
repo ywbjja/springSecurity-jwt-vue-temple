@@ -23,15 +23,15 @@ public class UserVo  {
 
     //角色列表（用户和角色是多对多的关系)
 
-    private Set<Role> roleSet;
+    private Set<Role> roles;
 
     //菜单列表
-    private Set<Menu> menuSet;
+    private Set<Menu> menus;
 
-    public UserVo(String id, String username,  Set<Role> roleSet, Set<Menu> menuSet) {
+    public UserVo(String id, String username,  Set<Role> roles, Set<Menu> menus) {
         this.id = id;
         this.username = username;
-        this.roleSet = roleSet;
-        this.menuSet = menuSet;
+        this.roles = roles;
+        this.menus = menus;
     }
 }
