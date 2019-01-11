@@ -485,7 +485,7 @@ public class Menu {
 ![](https://i.imgur.com/ifefJLq.png)
 然后我们就可以拿着这个`token`查询菜单树了。
 ![](https://i.imgur.com/qf0Kvzo.png)
-<a id="jump_ss1">本篇</a>
+<a id="jump_ss3">本篇</a>
 内容较长，先看下效果：
 ![](https://i.imgur.com/VQ9UTCe.png)
 然后侧边栏的路由其实根据我们后台获取到的：（这个数据结构比较简单，在这里只是演示）
