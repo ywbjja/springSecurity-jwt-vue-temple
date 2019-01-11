@@ -1,7 +1,7 @@
 # springSecurity-jwt-vue-temple Demo
 # 如果对你有帮助，希望可以点个Star支持一下~
 [Spring Security (一):整合JWT](#jump_ss1)<br>
-[Spring Security (二):获取菜单树](#jump_ss2)
+[Spring Security (二):获取菜单树](#jump_ss2)<br>
 [Spring Security (三):整合Vue.js实现权限控制](#jump_ss3)
 >违背的青春
 
@@ -1058,9 +1058,19 @@ src\router\index.js
 
 用`v-for`指令放到`sideBar`中去，目前为止基本动态的路由菜单已经可以生成了。如果有什么问题，请联系我指正...感谢...代码已经同步到`GitHub`。
 `Vue`前端clone下来后：
+# Getting started
+```
+# clone the project
+vue:
+git clone https://github.com/ywbjja/Vue_templete.git
+Spring:
+https://github.com/ywbjja/springSecurity-jwt-vue-temple.git
 
-    npm install/cnpm install
-	npm run dev
+# install dependency
+npm install
 
+# develop
+npm run dev
+```
 代码已经更新到`github`上，有任何疑问可以联系我~
 
