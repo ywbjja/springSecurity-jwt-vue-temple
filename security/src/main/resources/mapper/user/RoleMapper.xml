@@ -12,12 +12,16 @@
             <result column="per_describe" property="per_describe"/>
             <result column="per_parent_id" property="per_parent_id"/>
             <result column="per_type" property="per_type"/>
+            <result column="per_sort" property="per_sort"/>
+            <result column="per_icon" property="per_icon"/>
+            <result column="per_component" property="per_component"/>
         </collection>
     </resultMap>
 
     <select id="selectByUserName" parameterType="String" resultMap="PerResultMap">
         select Role.id,Role.rolename,Permission.per_id,Permission.per_name,Permission.per_resource,
-        Permission.per_describe,Permission.per_parent_id,Permission.per_type
+        Permission.per_describe,Permission.per_parent_id,Permission.per_type,Permission.per_sort,Permission.per_icon,
+        Permission.per_component
         from User LEFT JOIN RoleUser ru on ru.userId  = `User`.id
         LEFT JOIN Role on Role.id = ru.roleId
         LEFT JOIN RolePermission on RolePermission.rp_role_id = Role.id

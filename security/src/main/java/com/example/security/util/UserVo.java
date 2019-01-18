@@ -4,6 +4,7 @@ import com.example.security.entity.Role;
 import com.example.security.entity.User;
 import lombok.Data;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -26,9 +27,9 @@ public class UserVo  {
     private Set<Role> roles;
 
     //菜单列表
-    private Set<Menu> menus;
+    private List<Menu> menus;
 
-    public UserVo(String id, String username,  Set<Role> roles, Set<Menu> menus) {
+    public UserVo(String id, String username,  Set<Role> roles, List<Menu> menus) {
         this.id = id;
         this.username = username;
         this.roles = roles;

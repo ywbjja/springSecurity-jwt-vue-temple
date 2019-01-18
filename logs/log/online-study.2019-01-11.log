@@ -5339,3 +5339,180 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 【xkcoding】2019-01-11 16:59:06.486 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@6359426e] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
 【xkcoding】2019-01-11 16:59:06.486 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 【xkcoding】2019-01-11 16:59:06.486 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:13:34.491 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:34.491 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:34.507 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:34.507 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:34.508 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-11 17:13:34.508 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-11 17:13:34.519 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:13:34.519 DEBUG [http-nio-8086-exec-8] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:13:34.520 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:40.639 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:40.639 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:40.641 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:40.641 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:40.642 DEBUG [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-11 17:13:40.642 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-11 17:13:40.642 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:13:40.642 DEBUG [http-nio-8086-exec-3] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:13:40.642 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:46.319 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:46.319 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:46.332 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:46.332 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:46.333 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-11 17:13:46.333 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-11 17:13:46.333 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:13:46.333 DEBUG [http-nio-8086-exec-6] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:13:46.333 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:52.146 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:52.147 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:52.150 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:52.151 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:52.151 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-11 17:13:52.151 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-11 17:13:52.151 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:13:52.151 DEBUG [http-nio-8086-exec-5] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:13:52.152 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:52.288 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:52.288 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:52.300 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:52.399 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:52.399 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:52.408 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:52.409 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@238c29ef] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:52.409 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:13:52.409 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:13:52.454 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:52.455 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:13:52.462 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:13:52.462 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NDcyMDE2MzIsInN1YiI6ImFkbWluIiwiY3JlYXRlZCI6MTU0NzE5ODAzMjQwOX0.eayutho5CyooJbMB9sNUapKNddMi9Z2ZhOil_064hWdUwFfG6ijHs5agzuNcMrh68ygeQtkO6kfTC06WjZtaJA
+【xkcoding】2019-01-11 17:13:52.478 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - admin
+【xkcoding】2019-01-11 17:13:52.479 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:52.480 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:52.498 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:52.500 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing GET request for [/getUserInfo]
+【xkcoding】2019-01-11 17:13:52.500 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /getUserInfo
+【xkcoding】2019-01-11 17:13:52.500 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.UserController.getUserInfo(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:13:52.500 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - Last-Modified value for [/getUserInfo] is: -1
+【xkcoding】2019-01-11 17:13:52.500 DEBUG [http-nio-8086-exec-7] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:13:52.500 INFO  [http-nio-8086-exec-7] c.e.s.controller.UserController - admin
+【xkcoding】2019-01-11 17:13:52.501 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:52.501 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:52.562 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:52.622 DEBUG [http-nio-8086-exec-7] c.e.s.m.RoleMapper.selectByUserName - ==>  Preparing: select Role.id,Role.rolename,Permission.per_id,Permission.per_name,Permission.per_resource, Permission.per_describe,Permission.per_parent_id,Permission.per_type from User LEFT JOIN RoleUser ru on ru.userId = `User`.id LEFT JOIN Role on Role.id = ru.roleId LEFT JOIN RolePermission on RolePermission.rp_role_id = Role.id LEFT JOIN Permission on Permission.per_id = RolePermission.rp_per_id where `User`.username = ? 
+【xkcoding】2019-01-11 17:13:52.623 DEBUG [http-nio-8086-exec-7] c.e.s.m.RoleMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:52.642 DEBUG [http-nio-8086-exec-7] c.e.s.m.RoleMapper.selectByUserName - <==      Total: 3
+【xkcoding】2019-01-11 17:13:52.644 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@d215db8] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:52.644 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:13:52.645 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:13:53.576 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:53.576 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:53.586 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:53.660 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:53.674 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:53.682 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:53.684 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@1564f325] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:53.684 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:13:53.684 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:13:59.638 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:59.638 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:59.647 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:59.759 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:13:59.759 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:13:59.770 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:13:59.770 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@305ceba2] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:13:59.770 DEBUG [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:13:59.770 DEBUG [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:14:05.573 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:05.574 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:05.584 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:05.660 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:05.660 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:05.670 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:05.675 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@542b3397] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:05.676 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:14:05.676 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:14:06.345 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:06.345 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:14:06.350 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:06.350 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:14:06.371 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-11 17:14:06.371 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-11 17:14:06.371 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:14:06.371 DEBUG [http-nio-8086-exec-1] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:14:06.371 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:06.371 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:06.372 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: 123456(String)
+【xkcoding】2019-01-11 17:14:06.392 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:06.468 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:06.468 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: 123456(String)
+【xkcoding】2019-01-11 17:14:06.486 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:06.487 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@6db66de7] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:06.487 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:14:06.487 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:14:06.507 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:06.507 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:14:06.509 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:06.509 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NDcyMDE2NDYsInN1YiI6IjEyMzQ1NiIsImNyZWF0ZWQiOjE1NDcxOTgwNDY0ODZ9.dmUjvtSyOinf0OdeP966rz7yqBk8vxfP0QQENBdFlcvD-KiJd_No1aLVYquT0ygjpbGbfPw8ZxgVsqWXYMbQpg
+【xkcoding】2019-01-11 17:14:06.510 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - 123456
+【xkcoding】2019-01-11 17:14:06.510 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:06.510 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: 123456(String)
+【xkcoding】2019-01-11 17:14:06.536 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:06.558 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing GET request for [/getUserInfo]
+【xkcoding】2019-01-11 17:14:06.558 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /getUserInfo
+【xkcoding】2019-01-11 17:14:06.558 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.UserController.getUserInfo(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:14:06.558 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - Last-Modified value for [/getUserInfo] is: -1
+【xkcoding】2019-01-11 17:14:06.558 DEBUG [http-nio-8086-exec-10] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:14:06.558 INFO  [http-nio-8086-exec-10] c.e.s.controller.UserController - 123456
+【xkcoding】2019-01-11 17:14:06.559 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:06.559 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: 123456(String)
+【xkcoding】2019-01-11 17:14:06.583 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:06.583 DEBUG [http-nio-8086-exec-10] c.e.s.m.RoleMapper.selectByUserName - ==>  Preparing: select Role.id,Role.rolename,Permission.per_id,Permission.per_name,Permission.per_resource, Permission.per_describe,Permission.per_parent_id,Permission.per_type from User LEFT JOIN RoleUser ru on ru.userId = `User`.id LEFT JOIN Role on Role.id = ru.roleId LEFT JOIN RolePermission on RolePermission.rp_role_id = Role.id LEFT JOIN Permission on Permission.per_id = RolePermission.rp_per_id where `User`.username = ? 
+【xkcoding】2019-01-11 17:14:06.583 DEBUG [http-nio-8086-exec-10] c.e.s.m.RoleMapper.selectByUserName - ==> Parameters: 123456(String)
+【xkcoding】2019-01-11 17:14:06.598 DEBUG [http-nio-8086-exec-10] c.e.s.m.RoleMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:06.599 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@230bbceb] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:06.600 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:14:06.600 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:14:16.424 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:16.424 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:14:16.434 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:16.434 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:14:16.435 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-11 17:14:16.435 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-11 17:14:16.435 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:14:16.435 DEBUG [http-nio-8086-exec-2] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:14:16.435 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:16.447 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:16.447 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:16.460 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:16.545 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:16.545 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:16.555 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:16.579 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@3bb5a891] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:16.579 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:14:16.579 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-11 17:14:16.588 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:16.588 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-11 17:14:16.590 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-11 17:14:16.590 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE1NDcyMDE2NTYsInN1YiI6ImFkbWluIiwiY3JlYXRlZCI6MTU0NzE5ODA1NjU1Nn0.tNvCyVyW-s4Mas2rd6HgqFFihntLoCrMPAvHFtTLck0crak6CszUgeI775IXhBDHRSBhFFl0aWZDv7nzgo3Ebg
+【xkcoding】2019-01-11 17:14:16.601 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - admin
+【xkcoding】2019-01-11 17:14:16.601 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:16.601 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:16.612 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:16.619 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing GET request for [/getUserInfo]
+【xkcoding】2019-01-11 17:14:16.633 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /getUserInfo
+【xkcoding】2019-01-11 17:14:16.634 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.UserController.getUserInfo(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-11 17:14:16.634 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Last-Modified value for [/getUserInfo] is: -1
+【xkcoding】2019-01-11 17:14:16.634 DEBUG [http-nio-8086-exec-8] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-11 17:14:16.634 INFO  [http-nio-8086-exec-8] c.e.s.controller.UserController - admin
+【xkcoding】2019-01-11 17:14:16.635 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-11 17:14:16.636 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:16.646 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-11 17:14:16.646 DEBUG [http-nio-8086-exec-8] c.e.s.m.RoleMapper.selectByUserName - ==>  Preparing: select Role.id,Role.rolename,Permission.per_id,Permission.per_name,Permission.per_resource, Permission.per_describe,Permission.per_parent_id,Permission.per_type from User LEFT JOIN RoleUser ru on ru.userId = `User`.id LEFT JOIN Role on Role.id = ru.roleId LEFT JOIN RolePermission on RolePermission.rp_role_id = Role.id LEFT JOIN Permission on Permission.per_id = RolePermission.rp_per_id where `User`.username = ? 
+【xkcoding】2019-01-11 17:14:16.686 DEBUG [http-nio-8086-exec-8] c.e.s.m.RoleMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-11 17:14:16.698 DEBUG [http-nio-8086-exec-8] c.e.s.m.RoleMapper.selectByUserName - <==      Total: 3
+【xkcoding】2019-01-11 17:14:16.699 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@4772d388] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4e38d975]
+【xkcoding】2019-01-11 17:14:16.700 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-11 17:14:16.700 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Successfully completed request

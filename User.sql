@@ -61,6 +61,8 @@ CREATE TABLE `Role`  (
 INSERT INTO `Role` VALUES (1, 'ROLE_ADMIN');
 INSERT INTO `Role` VALUES (2, 'ROLE_USER');
 
+SET FOREIGN_KEY_CHECKS=0;
+
 -- ----------------------------
 -- Table structure for Permission
 -- ----------------------------
@@ -68,20 +70,22 @@ DROP TABLE IF EXISTS `Permission`;
 CREATE TABLE `Permission` (
   `per_id` int(11) NOT NULL,
   `per_parent_id` int(11) DEFAULT NULL,
-  `per_name` varchar(100) DEFAULT NULL COMMENT '权限名称',
-  `per_resource` varchar(100) DEFAULT NULL COMMENT '权限资源',
-  `per_type` varchar(100) DEFAULT NULL COMMENT '权限类型',
-  `per_icon` varchar(100) DEFAULT NULL COMMENT '图标',
-  `per_describe` varchar(100) DEFAULT NULL COMMENT '权限描述',
+  `per_name` varchar(100) DEFAULT NULL COMMENT '鏉冮檺鍚嶇О',
+  `per_resource` varchar(100) DEFAULT NULL COMMENT '鏉冮檺璧勬簮',
+  `per_type` varchar(100) DEFAULT NULL COMMENT '鏉冮檺绫诲瀷',
+  `per_icon` varchar(100) DEFAULT NULL COMMENT '鍥炬爣',
+  `per_describe` varchar(100) DEFAULT NULL COMMENT '鏉冮檺鎻忚堪',
+  `per_component` varchar(255) DEFAULT NULL,
+  `per_sort` int(11) DEFAULT NULL,
   PRIMARY KEY (`per_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of Permission
 -- ----------------------------
-INSERT INTO `Permission` VALUES ('1101', '0', '权限管理', 'auth', 'menu', null, '权限管理菜单');
-INSERT INTO `Permission` VALUES ('1102', '1101', '角色管理', 'role', 'menu', null, '角色管理菜单');
-INSERT INTO `Permission` VALUES ('1103', '1101', '资源管理', 'per', 'menu', null, '资源管理菜单');
+INSERT INTO `Permission` VALUES ('1101', '0', '鏉冮檺绠＄悊', 'auth', 'menu', 'auth', '鏉冮檺绠＄悊鑿滃崟', '', '1');
+INSERT INTO `Permission` VALUES ('1102', '1101', '瑙掕壊绠＄悊', 'role', 'menu', null, '瑙掕壊绠＄悊鑿滃崟', 'pre/role/index', '101');
+INSERT INTO `Permission` VALUES ('1103', '1101', '璧勬簮绠＄悊', 'per', 'menu', null, '璧勬簮绠＄悊鑿滃崟', 'pre/perm/index', '102');
 
 
 -- ----------------------------
@@ -90,8 +94,8 @@ INSERT INTO `Permission` VALUES ('1103', '1101', '资源管理', 'per', 'menu', null
 DROP TABLE IF EXISTS `RolePermission`;
 CREATE TABLE `RolePermission` (
   `rp_id` int(11) NOT NULL,
-  `rp_role_id` int(11) DEFAULT NULL COMMENT '角色id',
-  `rp_per_id` int(11) DEFAULT NULL COMMENT '权限id',
+  `rp_role_id` int(11) DEFAULT NULL ,
+  `rp_per_id` int(11) DEFAULT NULL ,
   PRIMARY KEY (`rp_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

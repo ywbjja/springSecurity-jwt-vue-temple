@@ -1,9 +1,8 @@
 package com.example.security.util;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import com.example.security.entity.Permission;
+
+import java.util.*;
 
 /**
  * @Autoor:杨文彬
@@ -18,19 +17,18 @@ public class GenTree {
      * @param nodes
      * @return
      */
-    public static Set<Menu> genRoot(Set<Menu> nodes){
-        Set<Menu> root = new HashSet<>();
+    public static List<Permission> genRoot(List<Permission> nodes){
+        List<Permission> root = new ArrayList<Permission>();
         //遍历数据
-        nodes.forEach(menu -> {
+        nodes.forEach(permission -> {
             //当父id是0的时候应该是根节点
-            System.out.println(menu.getPer_paerent_id());
-            if(menu.getPer_paerent_id() == 0){
-                root.add(menu);
+            if(permission.getPer_parent_id() == 0){
+                root.add(permission);
             }
         });
         //这里是子节点的创建方法
-        root.forEach(menu -> {
-            genChildren(menu,nodes);
+        root.forEach(permission -> {
+            genChildren(permission,nodes);
         });
         //返回数据
         return root;
@@ -38,24 +36,24 @@ public class GenTree {
 
     /**
      * 递归子节点
-     * @param menu
+     * @param permission
      * @param nodes
      * @return
      */
-    private static Menu genChildren(Menu menu, Set<Menu> nodes) {
+    private static Permission genChildren(Permission permission, List<Permission> nodes) {
         //遍历传过来的数据
-        for (Menu menu1 :nodes){
+        for (Permission permission1 :nodes){
             //如果数据中的父id和上面的per_id一致应该就放children中去
-            if(menu.getPer_id().equals(menu1.getPer_paerent_id())){
+            if(permission.getPer_id().equals(permission1.getPer_parent_id())){
                 //如果当前节点的子节点是空的则初始化，如果不为空就加进去
-                if(menu.getChildren() == null){
-                    menu.setChildren(new ArrayList<Menu>());
+                if(permission.getChildren() == null){
+                    permission.setChildren(new ArrayList<Permission>());
                 }
-                menu.getChildren().add(genChildren(menu1,nodes));
+                permission.getChildren().add(genChildren(permission1,nodes));
             }
         }
         //返回数据
-        return menu;
+        return permission;
     }
 
    
