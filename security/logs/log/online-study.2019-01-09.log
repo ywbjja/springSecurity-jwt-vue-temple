@@ -555,3 +555,517 @@
 【xkcoding】2019-01-09 20:32:29.151 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@39bd8284] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@726a17c4]
 【xkcoding】2019-01-09 20:32:29.151 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 【xkcoding】2019-01-09 20:32:29.151 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:38:24.130 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+【xkcoding】2019-01-09 20:38:24.191 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'servletContextInitParams' with lowest search precedence
+【xkcoding】2019-01-09 20:38:24.193 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+【xkcoding】2019-01-09 20:38:24.193 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+【xkcoding】2019-01-09 20:38:24.194 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+【xkcoding】2019-01-09 20:38:24.333 INFO  [main] c.e.security.SecurityApplication - Starting SecurityApplication on DESKTOP-GHH329T with PID 3828 (C:\Users\37155\Documents\GitHub\springSecurityDemo\security\target\classes started by BBBB in C:\Users\37155\Documents\GitHub\springSecurityDemo\security)
+【xkcoding】2019-01-09 20:38:24.334 INFO  [main] c.e.security.SecurityApplication - The following profiles are active: dev
+【xkcoding】2019-01-09 20:38:24.498 INFO  [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Wed Jan 09 20:38:24 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-09 20:38:24.962 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+【xkcoding】2019-01-09 20:38:26.611 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application-dev.yml]' with search precedence immediately lower than 'applicationConfigurationProperties'
+【xkcoding】2019-01-09 20:38:26.611 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'applicationConfig: [classpath:/application.yml]' with search precedence immediately lower than 'applicationConfig: [classpath:/application-dev.yml]'
+【xkcoding】2019-01-09 20:38:26.611 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'applicationConfigurationProperties'
+【xkcoding】2019-01-09 20:38:26.611 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Removing PropertySource 'defaultProperties'
+【xkcoding】2019-01-09 20:38:27.611 INFO  [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8086 (http)
+【xkcoding】2019-01-09 20:38:27.623 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2019-01-09 20:38:27.624 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+【xkcoding】2019-01-09 20:38:27.785 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2019-01-09 20:38:27.785 DEBUG [localhost-startStop-1] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2019-01-09 20:38:27.785 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3288 ms
+【xkcoding】2019-01-09 20:38:29.480 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+【xkcoding】2019-01-09 20:38:29.481 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+【xkcoding】2019-01-09 20:38:29.481 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+【xkcoding】2019-01-09 20:38:29.481 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+【xkcoding】2019-01-09 20:38:29.482 INFO  [localhost-startStop-1] o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+【xkcoding】2019-01-09 20:38:29.482 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'jwtAuthenticationTokenFilter' to: [/*]
+【xkcoding】2019-01-09 20:38:29.482 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+【xkcoding】2019-01-09 20:38:29.482 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+【xkcoding】2019-01-09 20:38:29.540 DEBUG [localhost-startStop-1] o.s.web.filter.CorsFilter - Initializing filter 'corsFilter'
+【xkcoding】2019-01-09 20:38:29.541 DEBUG [localhost-startStop-1] o.s.web.filter.CorsFilter - Filter 'corsFilter' configured successfully
+【xkcoding】2019-01-09 20:38:29.554 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+【xkcoding】2019-01-09 20:38:29.862 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@272a179c, org.springframework.security.web.context.SecurityContextPersistenceFilter@31ff1390, org.springframework.security.web.header.HeaderWriterFilter@7e97551f, org.springframework.security.web.authentication.logout.LogoutFilter@4303b7f0, com.example.security.jwt.JwtAuthenticationTokenFilter@46a51ec9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@781a9412, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29f0802c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30feffc, org.springframework.security.web.session.SessionManagementFilter@4a31c2ee, org.springframework.security.web.access.ExceptionTranslationFilter@40226788, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74fef3f7]
+【xkcoding】2019-01-09 20:38:30.402 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Wed Jan 09 20:38:24 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-09 20:38:30.482 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Wed Jan 09 20:38:24 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-09 20:38:30.493 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 1 request handler methods found on class com.example.security.controller.AuthController: {public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map)={[/auth/login]}}
+【xkcoding】2019-01-09 20:38:30.496 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/auth/login]}" onto public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)
+【xkcoding】2019-01-09 20:38:30.498 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 request handler methods found on class com.example.security.controller.UserController: {public com.example.security.util.RetResult com.example.security.controller.UserController.getUserInfo(java.util.Map)={[/getUserInfo]}, public com.example.security.util.RetResult com.example.security.controller.UserController.getMenuTree(java.util.Map)={[/queryMenuTree]}}
+【xkcoding】2019-01-09 20:38:30.499 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUserInfo]}" onto public com.example.security.util.RetResult com.example.security.controller.UserController.getUserInfo(java.util.Map<java.lang.String, java.lang.Object>)
+【xkcoding】2019-01-09 20:38:30.499 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/queryMenuTree]}" onto public com.example.security.util.RetResult com.example.security.controller.UserController.getMenuTree(java.util.Map<java.lang.String, java.lang.Object>)
+【xkcoding】2019-01-09 20:38:30.502 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 request handler methods found on class org.springframework.boot.autoconfigure.web.BasicErrorController: {public org.springframework.http.ResponseEntity org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)={[/error]}, public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)={[/error],produces=[text/html]}}
+【xkcoding】2019-01-09 20:38:30.503 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+【xkcoding】2019-01-09 20:38:30.503 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+【xkcoding】2019-01-09 20:38:30.548 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Wed Jan 09 20:38:24 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalRequiredAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.internalCommonAnnotationProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.event.internalEventListenerProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.event.internalEventListenerFactory': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'securityApplication': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'webSecurity': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'authController': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'userController': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.549 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jwtAuthenticationTokenFilter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jwtTokenUtil': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jwtUserDetailsServiceImpl': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'userServiceImpl': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'objectPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'authenticationManagerBuilder': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'enableGlobalAuthenticationAutowiredConfigurer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'initializeUserDetailsBeanManagerConfigurer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'initializeAuthenticationProviderBeanManagerConfigurer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.550 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'delegatingApplicationListener': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'webSecurityExpressionHandler': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springSecurityFilterChain': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'privilegeEvaluator': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'autowiredWebSecurityConfigurersIgnoreParents': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.554 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestDataValueProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'methodSecurityInterceptor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'methodSecurityMetadataSource': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'preInvocationAuthorizationAdvice': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.security.authenticationManager': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'passwordEncoder': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'corsFilter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'metaDataSourceAdvisor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.aop.config.internalAutoProxyCreator': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.AutoConfigurationPackages': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.555 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'xml': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'roleMapper': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'userMapper': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'propertySourcesPlaceholderConfigurer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'standardJacksonObjectMapperBuilderCustomizer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jacksonObjectMapperBuilder': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.556 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jacksonObjectMapper': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jsonComponentModule': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'websocketContainerCustomizer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'tomcatEmbeddedServletContainerFactory': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.557 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'embeddedServletContainerCustomizerBeanPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'errorPageRegistrarBeanPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dispatcherServlet': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dispatcherServletRegistration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.558 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'defaultValidator': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'methodValidationPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'error': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'beanNameViewResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'conventionErrorViewResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'errorAttributes': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'basicErrorController': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'errorPageCustomizer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'preserveErrorControllerTargetClassPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.559 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestMappingHandlerAdapter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestMappingHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcValidator': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcPathMatcher': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcUrlPathHelper': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'viewControllerHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'beanNameHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'resourceHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcResourceUrlProvider': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'defaultServletHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcConversionService': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcUriComponentsContributor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'httpRequestHandlerAdapter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'simpleControllerHandlerAdapter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'handlerExceptionResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.560 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcViewResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mvcHandlerMappingIntrospector': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'faviconHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'faviconRequestHandler': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'defaultViewResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'viewResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'welcomePageHandlerMapping': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'requestContextFilter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'hiddenHttpMethodFilter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'httpPutFormContentFilter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dataSource': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'tomcatPoolDataSourceMetadataProvider': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dataSourceInitializer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'dataSourceInitializerPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.561 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.562 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'sqlSessionFactory': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.562 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'sqlSessionTemplate': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.562 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.562 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mbeanExporter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'objectNamingStrategy': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mbeanServer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springApplicationAdminRegistrar': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'persistenceExceptionTranslationPostProcessor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'stringHttpMessageConverter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'mappingJackson2HttpMessageConverter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.563 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'messageConverters': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.security.BootGlobalAuthenticationConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'bootGlobalAuthenticationConfigurationAdapter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'authenticationEventPublisher': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'securityProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionManager': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'jdbcTemplate': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'namedParameterJdbcTemplate': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.564 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.transaction.config.internalTransactionAdvisor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionAttributeSource': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionInterceptor': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.transaction.config.internalTransactionalEventListenerFactory': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'transactionTemplate': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'platformTransactionManagerCustomizers': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.565 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'securityFilterChainRegistration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'characterEncodingFilter': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'localeCharsetMappingsCustomizer': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'multipartConfigElement': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'multipartResolver': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'serverProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'duplicateServerPropertiesDetector': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'restTemplateBuilder': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'autoConfigurationReport': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springApplicationArguments': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springBootBanner': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'springBootLoggingSystem': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'environment': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.566 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'systemProperties': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'systemEnvironment': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'messageSource': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'applicationEventMulticaster': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'servletContext': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'contextParameters': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.567 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping - Rejected bean name 'contextAttributes': no URL paths identified
+【xkcoding】2019-01-09 20:38:30.588 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【xkcoding】2019-01-09 20:38:30.588 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【xkcoding】2019-01-09 20:38:30.612 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Looking for exception mappings: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2d3379b4: startup date [Wed Jan 09 20:38:24 CST 2019]; root of context hierarchy
+【xkcoding】2019-01-09 20:38:30.690 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+【xkcoding】2019-01-09 20:38:31.145 INFO  [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+【xkcoding】2019-01-09 20:38:31.159 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Looking for resource handler mappings
+【xkcoding】2019-01-09 20:38:31.160 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Found resource handler mapping: URL pattern="/**/favicon.ico", locations=[ServletContext resource [/], class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], class path resource []], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@108bdbd8]
+【xkcoding】2019-01-09 20:38:31.160 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Found resource handler mapping: URL pattern="/webjars/**", locations=[class path resource [META-INF/resources/webjars/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@6345e7b9]
+【xkcoding】2019-01-09 20:38:31.160 DEBUG [main] o.s.w.s.resource.ResourceUrlProvider - Found resource handler mapping: URL pattern="/**", locations=[ServletContext resource [/], class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@4f8b4bd0]
+【xkcoding】2019-01-09 20:38:31.166 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+【xkcoding】2019-01-09 20:38:31.178 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+【xkcoding】2019-01-09 20:38:31.192 INFO  [main] o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+【xkcoding】2019-01-09 20:38:31.219 INFO  [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8086 (http)
+【xkcoding】2019-01-09 20:38:31.219 DEBUG [main] o.s.w.c.s.StandardServletEnvironment - Adding PropertySource 'server.ports' with highest search precedence
+【xkcoding】2019-01-09 20:38:31.224 INFO  [main] c.e.security.SecurityApplication - Started SecurityApplication in 8.434 seconds (JVM running for 11.496)
+【xkcoding】2019-01-09 20:38:43.808 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing servlet 'dispatcherServlet'
+【xkcoding】2019-01-09 20:38:43.810 INFO  [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+【xkcoding】2019-01-09 20:38:43.810 INFO  [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+【xkcoding】2019-01-09 20:38:43.810 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Using MultipartResolver [org.springframework.web.multipart.support.StandardServletMultipartResolver@7cbe3b0d]
+【xkcoding】2019-01-09 20:38:43.821 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@2418977]
+【xkcoding】2019-01-09 20:38:43.835 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@15312dcf]
+【xkcoding】2019-01-09 20:38:43.845 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@56139c4b]
+【xkcoding】2019-01-09 20:38:43.861 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@6d4aa5a5]
+【xkcoding】2019-01-09 20:38:43.861 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Published WebApplicationContext of servlet 'dispatcherServlet' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet]
+【xkcoding】2019-01-09 20:38:43.861 INFO  [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+【xkcoding】2019-01-09 20:38:43.861 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Servlet 'dispatcherServlet' configured successfully
+【xkcoding】2019-01-09 20:38:43.888 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:38:43.888 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:38:43.928 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:38:43.928 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:38:43.956 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:38:43.986 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:38:43.987 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:38:43.990 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:38:43.991 DEBUG [http-nio-8086-exec-2] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:38:44.245 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:38:45.247 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:38:45.286 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:38:45.329 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:38:45.492 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:38:45.493 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:38:45.506 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:38:46.351 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@d8ad3db] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:38:46.352 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:38:46.352 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:41:49.735 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:41:49.735 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:41:49.754 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:41:49.755 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:41:49.755 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:41:49.757 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:41:49.757 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:41:49.757 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:41:49.758 DEBUG [http-nio-8086-exec-5] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:41:49.759 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:41:49.773 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:41:49.774 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:41:49.786 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:41:49.935 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:41:49.935 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:41:49.948 DEBUG [http-nio-8086-exec-5] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:41:49.953 DEBUG [http-nio-8086-exec-5] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@1619dd82] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:41:49.953 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:41:49.953 DEBUG [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:44:09.860 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:44:09.861 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:44:09.877 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:44:09.877 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:44:09.878 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:44:09.879 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:44:09.880 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:44:09.880 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:44:09.881 DEBUG [http-nio-8086-exec-8] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:44:09.882 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:44:09.894 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:44:09.895 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:44:09.905 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:44:10.043 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:44:10.044 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:44:10.058 DEBUG [http-nio-8086-exec-8] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:44:10.060 DEBUG [http-nio-8086-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@69bc17e3] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:44:10.061 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:44:10.061 DEBUG [http-nio-8086-exec-8] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:47:10.564 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:47:10.564 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:47:10.576 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:47:10.576 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:47:10.577 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:47:10.579 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:47:10.580 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:47:10.580 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:47:10.581 DEBUG [http-nio-8086-exec-1] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:47:10.582 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:47:10.593 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:47:10.593 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:47:10.604 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:47:10.746 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:47:10.749 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:47:10.763 DEBUG [http-nio-8086-exec-1] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:47:10.767 DEBUG [http-nio-8086-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@152b5956] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:47:10.768 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:47:10.768 DEBUG [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:47:46.151 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:47:46.151 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:47:46.176 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:47:46.176 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:47:46.177 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:47:46.179 DEBUG [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:47:46.180 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:47:46.180 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:47:46.181 DEBUG [http-nio-8086-exec-4] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:47:46.181 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:47:46.193 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:47:46.193 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:47:46.203 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:47:46.371 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:47:46.377 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:47:46.389 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:47:46.394 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@704e6f17] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:47:46.394 DEBUG [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:47:46.394 DEBUG [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:48:49.653 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:48:49.654 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:48:49.667 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:48:49.667 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:48:49.668 INFO  [http-nio-8086-exec-7] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:48:49.669 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:48:49.670 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:48:49.670 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:48:49.671 DEBUG [http-nio-8086-exec-7] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:48:49.672 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:48:49.685 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:48:49.686 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:48:49.696 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:48:49.837 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:48:49.838 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:48:49.853 DEBUG [http-nio-8086-exec-7] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:48:49.856 DEBUG [http-nio-8086-exec-7] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@2cb669f0] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:48:49.857 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:48:49.857 DEBUG [http-nio-8086-exec-7] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:50:35.817 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:50:35.817 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:50:35.835 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:50:35.836 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:50:35.836 INFO  [http-nio-8086-exec-9] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:50:35.840 DEBUG [http-nio-8086-exec-9] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:50:35.840 DEBUG [http-nio-8086-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:50:35.841 DEBUG [http-nio-8086-exec-9] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:50:35.841 DEBUG [http-nio-8086-exec-9] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:50:35.841 DEBUG [http-nio-8086-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:50:35.854 DEBUG [http-nio-8086-exec-9] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:50:35.856 DEBUG [http-nio-8086-exec-9] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:50:35.866 DEBUG [http-nio-8086-exec-9] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:50:36.029 DEBUG [http-nio-8086-exec-9] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:50:36.030 DEBUG [http-nio-8086-exec-9] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:50:36.041 DEBUG [http-nio-8086-exec-9] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:50:36.046 DEBUG [http-nio-8086-exec-9] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@7541f776] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:50:36.046 DEBUG [http-nio-8086-exec-9] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:50:36.046 DEBUG [http-nio-8086-exec-9] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:54:33.461 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:54:33.462 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:54:33.480 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:54:33.480 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:54:33.481 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:54:33.485 DEBUG [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:54:33.486 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:54:33.487 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:54:33.488 DEBUG [http-nio-8086-exec-3] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:54:33.489 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:54:33.505 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:54:33.506 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:54:33.521 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:54:33.719 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:54:33.726 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:54:33.761 DEBUG [http-nio-8086-exec-3] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:54:33.766 DEBUG [http-nio-8086-exec-3] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@4b19d389] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:54:33.767 DEBUG [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:54:33.767 DEBUG [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:57:42.305 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:57:42.305 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:57:42.330 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:57:42.331 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:57:42.332 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:57:42.336 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:57:42.336 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:57:42.337 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:57:42.337 DEBUG [http-nio-8086-exec-6] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:57:42.338 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:57:42.355 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:57:42.356 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:57:42.369 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:57:42.531 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:57:42.532 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:57:42.544 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:57:42.547 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@51ef2b08] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:57:42.547 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:57:42.547 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 20:57:54.908 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:57:54.908 INFO  [http-nio-8086-exec-8] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 20:57:54.919 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 20:57:54.919 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 20:57:54.919 INFO  [http-nio-8086-exec-10] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 20:57:54.921 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 20:57:54.921 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 20:57:54.923 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 20:57:54.923 DEBUG [http-nio-8086-exec-10] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 20:57:54.923 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:57:54.935 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:57:54.935 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:57:54.948 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:57:55.089 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 20:57:55.090 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 20:57:55.102 DEBUG [http-nio-8086-exec-10] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 20:57:55.104 DEBUG [http-nio-8086-exec-10] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@5b2e53d3] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 20:57:55.104 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 20:57:55.105 DEBUG [http-nio-8086-exec-10] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 21:19:36.371 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 21:19:36.374 INFO  [http-nio-8086-exec-1] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 21:19:36.406 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 21:19:36.406 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 21:19:36.412 INFO  [http-nio-8086-exec-2] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 21:19:36.416 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 21:19:36.418 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 21:19:36.424 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 21:19:36.425 DEBUG [http-nio-8086-exec-2] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 21:19:36.430 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 21:19:50.905 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 21:19:50.908 INFO  [http-nio-8086-exec-3] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 21:19:50.926 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 21:19:50.926 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 21:19:50.926 INFO  [http-nio-8086-exec-4] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 21:19:50.928 DEBUG [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 21:19:50.928 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 21:19:50.930 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 21:19:50.930 DEBUG [http-nio-8086-exec-4] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 21:19:50.932 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 21:19:58.154 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 21:19:58.156 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 21:19:58.171 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 21:19:58.333 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 21:19:58.333 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 21:19:58.344 DEBUG [http-nio-8086-exec-2] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 21:19:58.354 DEBUG [http-nio-8086-exec-2] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@8c48a26] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 21:19:58.354 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 21:19:58.354 DEBUG [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 21:20:09.939 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 21:20:09.939 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 21:20:09.949 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 21:20:10.078 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 21:20:10.079 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 21:20:10.089 DEBUG [http-nio-8086-exec-4] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 21:20:10.091 DEBUG [http-nio-8086-exec-4] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@7fc7c97c] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 21:20:10.092 DEBUG [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 21:20:10.092 DEBUG [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - Successfully completed request
+【xkcoding】2019-01-09 21:22:16.855 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 21:22:16.855 INFO  [http-nio-8086-exec-5] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：null
+【xkcoding】2019-01-09 21:22:16.872 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - 1111111111
+【xkcoding】2019-01-09 21:22:16.872 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - authHeader：undefined
+【xkcoding】2019-01-09 21:22:16.873 INFO  [http-nio-8086-exec-6] c.e.s.j.JwtAuthenticationTokenFilter - null
+【xkcoding】2019-01-09 21:22:16.875 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/auth/login]
+【xkcoding】2019-01-09 21:22:16.876 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /auth/login
+【xkcoding】2019-01-09 21:22:16.876 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public com.example.security.util.RetResult com.example.security.controller.AuthController.login(java.util.Map<java.lang.String, java.lang.Object>)]
+【xkcoding】2019-01-09 21:22:16.876 DEBUG [http-nio-8086-exec-6] o.s.web.cors.DefaultCorsProcessor - Skip CORS processing: response already contains "Access-Control-Allow-Origin" header
+【xkcoding】2019-01-09 21:22:16.877 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [java.util.Map<java.lang.String, java.lang.Object>] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 21:22:16.890 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 21:22:16.890 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 21:22:16.903 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 21:22:17.051 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==>  Preparing: select `User`.id,`User`.username,`User`.`password` ,Role.rolename from User LEFT JOIN RoleUser on RoleUser.userId = `User`.id LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = ? 
+【xkcoding】2019-01-09 21:22:17.055 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - ==> Parameters: admin(String)
+【xkcoding】2019-01-09 21:22:17.067 DEBUG [http-nio-8086-exec-6] c.e.s.m.UserMapper.selectByUserName - <==      Total: 1
+【xkcoding】2019-01-09 21:22:17.073 DEBUG [http-nio-8086-exec-6] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [com.example.security.util.RetResult@31c0d447] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@73877e19]
+【xkcoding】2019-01-09 21:22:17.074 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+【xkcoding】2019-01-09 21:22:17.074 DEBUG [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Successfully completed request
