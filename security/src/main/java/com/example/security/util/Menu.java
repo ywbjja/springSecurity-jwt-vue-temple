@@ -11,15 +11,13 @@ import java.util.List;
  */
 @Data
 public class Menu {
-    private Integer per_id;
-    private Integer per_paerent_id;
-    private String per_name;
-    private String per_resource;
+    private String name;
+    private String path;
+    private String component;
+    private String redirect;
+    private MenuMetaVo meta;
     private List<Menu> children;
-    public Menu(Integer per_id,Integer per_paerent_id,String per_name,String per_resource){
-        this.per_id = per_id;
-        this.per_paerent_id = per_paerent_id;
-        this.per_name = per_name;
-        this.per_resource = per_resource;
-    }
+    private Boolean alwaysShow;
+
+
 }

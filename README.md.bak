@@ -416,7 +416,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         //遍历数据
         nodes.forEach(menu -> {
             //当父id是0的时候应该是根节点
-            System.out.println(menu.getPer_paerent_id());
             if(menu.getPer_paerent_id() == 0){
                 root.add(menu);
             }

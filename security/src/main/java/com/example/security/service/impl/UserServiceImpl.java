@@ -1,5 +1,6 @@
 package com.example.security.service.impl;
 
+import com.example.security.entity.Permission;
 import com.example.security.entity.Role;
 import com.example.security.entity.User;
 import com.example.security.jwt.JwtTokenUtil;
@@ -7,7 +8,6 @@ import com.example.security.mapper.RoleMapper;
 import com.example.security.mapper.UserMapper;
 import com.example.security.service.UserService;
 import com.example.security.util.*;
-import com.sun.deploy.panel.TreeBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,7 +19,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -86,17 +88,19 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.selectByUserName(username);
         //查询出改用户下的角色和权限
         Set<Role> roles = roleMapper.selectByUserName(username);
+        List<Permission> permissions = new ArrayList<Permission>();
         Set<Menu> menus = new HashSet<>();
         roles.forEach( role -> {
             role.getPermissions().forEach( permission -> {
                 //这里应该type为menu的，button目前还未添加
                 if(permission.getPer_type().equals("menu")){
-                    menus.add(new Menu(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
-                            permission.getPer_resource()));
+                    permissions.add(new Permission(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
+                            permission.getPer_resource(),permission.getPer_type(),permission.getPer_icon(),permission.getPer_describe(),
+                            permission.getPer_component(),permission.getPer_sort(),permission.getChildren()));
                 }
             });
         });
-        UserVo userVo =new UserVo(user.getId(),user.getUsername(),user.getRoles(),GenTree.genRoot(menus));
+        UserVo userVo =new UserVo(user.getId(),user.getUsername(),user.getRoles(), BulidTree.genRoot(GenTree.genRoot(permissions)));
         return new RetResult(RetCode.SUCCESS.getCode(),userVo);
 
     }
@@ -108,24 +112,8 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public RetResult getMenuTree(String username) {
-        //目前只做菜单权限以后增加按钮的权限控制
-        Set<Role> permissions = roleMapper.selectByUserName(username);
-        Set<Menu> menus =new HashSet<>();
-        //遍历上面得到的权限列表
-        permissions.forEach(role -> {
-            //遍历权限
-            role.getPermissions().forEach( permission -> {
-                if (permission.getPer_type().equals("menu")){
-                    log.info(permission.getPer_name());
-                    menus.add(new Menu(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
-                            permission.getPer_resource()));
-                    for (Menu menu:menus){
-                        System.out.println(menu);
-                    }
-                }
-            });
-        });
-        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功",GenTree.genRoot(menus));
+
+        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功");
     }
 
 
