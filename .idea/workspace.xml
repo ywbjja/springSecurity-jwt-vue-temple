@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23d75233-2e45-46ba-9e3d-dffeab25b26f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/resources/mapper/user/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/resources/mapper/user/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.sql" beforeDir="false" afterPath="$PROJECT_DIR$/User.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/security/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/security/src/main/resources/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/User.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -87,15 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security/src/main/java/com/example/security/config/WebSecurity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -160,7 +152,6 @@
         <option value="$PROJECT_DIR$/README.md.bak" />
         <option value="$PROJECT_DIR$/security/src/main/java/com/example/security/util/bulidTree.java" />
         <option value="$PROJECT_DIR$/security/src/main/java/com/example/security/util/BulidTree.java" />
-        <option value="$PROJECT_DIR$/User.sql" />
         <option value="$PROJECT_DIR$/security/.gitignore" />
         <option value="$PROJECT_DIR$/security/pom.xml" />
         <option value="$PROJECT_DIR$/security/src/main/java/com/example/security/service/RoleService.java" />
@@ -172,6 +163,7 @@
         <option value="$PROJECT_DIR$/security/src/main/java/com/example/security/entity/Role.java" />
         <option value="$PROJECT_DIR$/security/src/main/java/com/example/security/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/security/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/User.sql" />
       </list>
     </option>
   </component>
@@ -436,12 +428,12 @@
       <workItem from="1547807026482" duration="144000" />
       <workItem from="1548036868125" duration="7208000" />
       <workItem from="1548052042982" duration="369000" />
-      <workItem from="1548053805111" duration="6553000" />
+      <workItem from="1548053805111" duration="6733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68693000" />
+    <option name="totallyTimeSpent" value="68873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -590,13 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -749,7 +734,14 @@
     <entry file="file://$PROJECT_DIR$/security/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>

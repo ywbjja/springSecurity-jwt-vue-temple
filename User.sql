@@ -45,21 +45,27 @@ INSERT INTO `RoleUser` VALUES (1, 1, 1);
 INSERT INTO `RoleUser` VALUES (2, 2, 2);
 
 
+
+SET FOREIGN_KEY_CHECKS=0;
+
 -- ----------------------------
 -- Table structure for Role
 -- ----------------------------
 DROP TABLE IF EXISTS `Role`;
-CREATE TABLE `Role`  (
+CREATE TABLE `Role` (
   `id` bigint(20) NOT NULL,
-  `rolename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+  `rolename` varchar(255) DEFAULT NULL,
+  `roledesc` varchar(100) DEFAULT NULL COMMENT '角色描述',
+  `createTime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of Role
 -- ----------------------------
-INSERT INTO `Role` VALUES (1, 'ROLE_ADMIN');
-INSERT INTO `Role` VALUES (2, 'ROLE_USER');
+INSERT INTO `Role` VALUES ('1', 'ROLE_ADMIN', '系统管理员', '2019-01-21 11:02:32');
+INSERT INTO `Role` VALUES ('2', 'ROLE_USER', '用户测试001', '2019-01-21 11:02:42');
+
 
 SET FOREIGN_KEY_CHECKS=0;
 
