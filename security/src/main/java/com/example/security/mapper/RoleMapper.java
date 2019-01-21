@@ -2,6 +2,8 @@ package com.example.security.mapper;
 
 import com.example.security.entity.Role;
 
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -12,4 +14,6 @@ import java.util.Set;
 public interface RoleMapper {
 
     Set<Role> selectByUserName(String username);
+
+    ArrayList<Role> getRoleListByCond(Map<String,Object> map);
 }

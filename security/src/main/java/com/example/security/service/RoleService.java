@@ -1,7 +1,10 @@
 package com.example.security.service;
 
 import com.example.security.entity.Role;
+import com.example.security.util.RetResult;
 
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -10,4 +13,6 @@ import java.util.Set;
  * @Description：
  */
 public interface RoleService {
+
+    RetResult getRoleListByCond(Map<String,Object> map);
 }

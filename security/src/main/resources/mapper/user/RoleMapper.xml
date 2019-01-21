@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.security.mapper.RoleMapper">
 
+    <select id="getRoleListByCond" resultType="com.example.security.entity.Role">
+        select * from Role
+        order by id desc
+    </select>
+
     <resultMap id="PerResultMap" type="com.example.security.entity.Role">
         <id column="id"  property="id" />
         <result column="rolename"  property="rolename" />

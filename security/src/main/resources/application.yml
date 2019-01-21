@@ -15,3 +15,9 @@ mybatis:
   type-aliases-package: com.example.security.entity
 server:
   port: 8086
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

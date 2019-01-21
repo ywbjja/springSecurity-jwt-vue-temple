@@ -2,6 +2,7 @@ package com.example.security.entity;
 
 import lombok.Data;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Set;
 
@@ -15,9 +16,12 @@ public class Role {
 
     private Integer id;
 
-    private String describe;
 
     private String rolename;
+
+    private String roledesc;
+
+    private Timestamp createTime;
 
 
     //权限的列表
