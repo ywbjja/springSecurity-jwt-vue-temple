@@ -56,18 +56,5 @@ public class GenTree {
         return permission;
     }
 
-    public static void main(String[] args) {
-        Set<Menu> set = new HashSet<>();
-        set.addAll(Arrays.asList(
-                new Menu(1,0,"",""),
-                new Menu(2,1,"",""),
-                new Menu(3,1,"",""),
-                new Menu(4,1,"","")
 
-
-        ));
-        for (Menu menu:genRoot(set)){
-            System.out.println(menu);
-        }
-    }
 }

@@ -15,4 +15,6 @@ import java.util.Set;
 public interface RoleService {
 
     RetResult getRoleListByCond(Map<String,Object> map);
+
+    RetResult getAllRoleList(Map<String,Object> map);
 }

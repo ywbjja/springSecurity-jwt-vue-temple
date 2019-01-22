@@ -1,5 +1,6 @@
 package com.example.security.service;
 
+import com.example.security.entity.Permission;
 import com.example.security.entity.User;
 import com.example.security.jwt.JwtTokenUtil;
 import com.example.security.mapper.UserMapper;
@@ -15,6 +16,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author:YangWenbin
@@ -39,6 +43,10 @@ public interface UserService {
      * @return
      */
     RetResult getMenuTree(String username);
+
+    Object getAllMenuTree(List<Permission> permissionList);
+
+    List<Permission> getMenuTreeByPid(Integer per_parent_id);
 
 
 }

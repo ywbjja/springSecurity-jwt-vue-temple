@@ -20,17 +20,29 @@
             <result column="per_sort" property="per_sort"/>
             <result column="per_icon" property="per_icon"/>
             <result column="per_component" property="per_component"/>
+            <result column="per_crtTime" property="per_crtTime"/>
         </collection>
     </resultMap>
 
     <select id="selectByUserName" parameterType="String" resultMap="PerResultMap">
         select Role.id,Role.rolename,Permission.per_id,Permission.per_name,Permission.per_resource,
         Permission.per_describe,Permission.per_parent_id,Permission.per_type,Permission.per_sort,Permission.per_icon,
-        Permission.per_component
+        Permission.per_component,Permission.per_crtTime
         from User LEFT JOIN RoleUser ru on ru.userId  = `User`.id
         LEFT JOIN Role on Role.id = ru.roleId
         LEFT JOIN RolePermission on RolePermission.rp_role_id = Role.id
         LEFT JOIN Permission on Permission.per_id = RolePermission.rp_per_id
-        where `User`.username = #{username}
+        where `User`.username = #{username} order by Permission.per_sort asc
+    </select>
+
+    <select id="getMenuTree" parameterType="map" resultType="com.example.security.entity.Permission">
+        select Permission.per_id,Permission.per_name,Permission.per_resource,
+        Permission.per_describe,Permission.per_parent_id,Permission.per_type,Permission.per_sort,Permission.per_icon,
+        Permission.per_component,Permission.per_crtTime
+        from Permission order by Permission.per_sort asc
+    </select>
+
+    <select id="getAllRoleList" resultType="com.example.security.entity.Role">
+        select * from Role
     </select>
 </mapper>

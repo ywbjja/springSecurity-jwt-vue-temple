@@ -4,6 +4,7 @@ import com.example.security.service.RoleService;
 import com.example.security.util.RetResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +29,11 @@ public class RoleController {
     @RequestMapping(value = "/getRoleList",method = RequestMethod.POST)
     public RetResult getRoleList(@RequestBody  Map<String,Object> map){
         return roleService.getRoleListByCond(map);
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    @RequestMapping(value = "/getAllRoleList",method = RequestMethod.POST)
+    public RetResult getAllRoleList(@RequestBody(required = false) Map<String, Object> map){
+        return roleService.getAllRoleList(map);
     }
 }

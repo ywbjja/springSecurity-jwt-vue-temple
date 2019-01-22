@@ -1,9 +1,11 @@
 package com.example.security.controller;
 
 import com.example.security.service.UserService;
+import com.example.security.util.RetCode;
 import com.example.security.util.RetResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,6 +35,7 @@ public class UserController {
         return userService.getUserInfo(userDetails.getUsername());
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN')")
     @RequestMapping(value = "/queryMenuTree")
     public RetResult getMenuTree(@RequestBody(required = false) Map<String,Object> map){
         //使用Spring Security 获取用户信息
@@ -40,4 +43,12 @@ public class UserController {
         log.info(userDetails.getUsername());
         return userService.getMenuTree(userDetails.getUsername());
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    @RequestMapping(value = "/getAllMenuTree")
+    public RetResult getAllMenuTree(@RequestBody(required = false) Map<String,Object> map){
+        //使用Spring Security 获取用户信息
+        return new RetResult(RetCode.SUCCESS.getCode(),userService.getAllMenuTree(userService.getMenuTreeByPid(0)));
+    }
+
 }

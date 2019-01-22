@@ -26,4 +26,15 @@ public class Role {
 
     //权限的列表
     private Set<Permission> permissions;
+
+    public Role() {
+    }
+
+    public Role(Integer id, String rolename, String roledesc, Timestamp createTime, Set<Permission> permissions) {
+        this.id = id;
+        this.rolename = rolename;
+        this.roledesc = roledesc;
+        this.createTime = createTime;
+        this.permissions = permissions;
+    }
 }
