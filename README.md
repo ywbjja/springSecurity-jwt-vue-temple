@@ -15,6 +15,7 @@
 - [Spring Security（三）：与Vue.js整合](https://zhuanlan.zhihu.com/p/54845426)
 - [Spring Security（四）：更新前端路由获取方式](https://zhuanlan.zhihu.com/p/55203657)
 - [Spring Security（五）：前后端权限控制详解](https://zhuanlan.zhihu.com/p/55392971)
+- [Spring Security(六):前端菜单，角色权限页面的搭建](https://zhuanlan.zhihu.com/p/55823589)
 
 # Getting started
 
