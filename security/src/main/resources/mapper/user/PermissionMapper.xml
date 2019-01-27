@@ -2,5 +2,54 @@
 <!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.security.mapper.PermissionMapper">
 
+    <insert id="add">
+        insert into Permission (per_id,per_name,per_parent_id,per_resource,per_type,per_icon,per_describe,per_component,per_sort,per_crtTime)
+        values(#{per_id},#{per_name},#{per_parent_id},#{per_resource},#{per_type},#{per_icon},#{per_describe},#{per_component},#{per_sort},#{per_crtTime})
+    </insert>
+
+
+    <update id="update" parameterType="Map">
+        update Permission
+        <set>
+            <if test="per_name != null">per_name=#{per_name},</if>
+            <if test="per_resource != null">per_resource=#{per_resource},</if>
+            <if test="per_type != null">per_type=#{per_type},</if>
+            <if test="per_icon != null">per_icon=#{per_icon},</if>
+            <if test="per_describe != null">per_describe=#{per_describe},</if>
+            <if test="per_component != null">per_component=#{per_component},</if>
+            <if test="per_sort != null">per_sort=#{per_sort},</if>
+            <if test="per_crtTime != null">per_crtTime=#{per_crtTime},</if>
+        </set>
+        where per_id=#{per_id}
+    </update>
+
+    <delete id="del">
+        delete from RolePermission where rp_role_id = #{rp_role_id}
+    </delete>
+
+    <select id="getCount" resultType="Integer">
+        select count(*) from RolePermission where rp_role_id = #{rp_role_id}
+    </select>
+
+    <select id="getAllMenuTree" resultType="com.example.security.entity.Permission">
+        select * from Permission
+    </select>
+
+    <insert id="addRP">
+        insert into RolePermission (rp_id,rp_role_id,rp_per_id) value (#{rp_id},#{rp_role_id},#{rp_per_id})
+    </insert>
+
+
+
+    <select id="getParentMenu" resultType="com.example.security.entity.Permission">
+        select * from Permission where per_parent_id = #{per_parent_id}
+    </select>
+
+    <select id="getPerIdList" resultType="String">
+        select rp_per_id from RolePermission where rp_role_id = #{rp_role_id}
+    </select>
+
+
+
 
 </mapper>

@@ -89,27 +89,35 @@ CREATE TABLE `Permission` (
 -- ----------------------------
 -- Records of Permission
 -- ----------------------------
-INSERT INTO `Permission` VALUES ('1101', '0', '权限管理', 'auth', 'menu', 'auth', '权限管理菜单', '', '1');
-INSERT INTO `Permission` VALUES ('1102', '1101', '角色管理', 'role', 'menu', null, '角色管理菜单', 'pre/role/index', '101');
-INSERT INTO `Permission` VALUES ('1103', '1101', '资源管理', 'per', 'menu', null, '资源管理菜单', 'pre/perm/index', '102');
+INSERT INTO `Permission` VALUES ('1101', '0', '权限管理', 'auth', 'menu', 'auth', '权限管理菜单', '', '1', '2019-01-24 10:04:22');
+INSERT INTO `Permission` VALUES ('1102', '1101', '角色管理', 'role', 'menu', 'role', '角色管理菜单', 'pre/role/index', '101', '2019-01-27 11:59:49');
+INSERT INTO `Permission` VALUES ('1103', '1101', '资源管理', 'per', 'menu', 'resource', '资源管理菜单', 'pre/perm/index', '102', '2019-01-22 10:51:43');
+INSERT INTO `Permission` VALUES ('285779921140461568', '1101', '角色权限', 'roleauth', 'menu', 'roleauth', null, 'pre/roleauth/index', '104', '2019-01-24 12:29:52');
 
+
+
+SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
 -- Table structure for RolePermission
 -- ----------------------------
 DROP TABLE IF EXISTS `RolePermission`;
 CREATE TABLE `RolePermission` (
-  `rp_id` int(11) NOT NULL,
-  `rp_role_id` int(11) DEFAULT NULL ,
-  `rp_per_id` int(11) DEFAULT NULL ,
+  `rp_id` bigint(20) NOT NULL,
+  `rp_role_id` bigint(20) DEFAULT NULL COMMENT '角色id',
+  `rp_per_id` bigint(20) DEFAULT NULL COMMENT '权限id',
   PRIMARY KEY (`rp_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of RolePermission
 -- ----------------------------
-INSERT INTO `RolePermission` VALUES ('111', '1', '1101');
-INSERT INTO `RolePermission` VALUES ('112', '1', '1102');
-INSERT INTO `RolePermission` VALUES ('113', '1', '1103');
+INSERT INTO `RolePermission` VALUES ('286859857880166400', '1', '1101');
+INSERT INTO `RolePermission` VALUES ('286859857980829696', '1', '1102');
+INSERT INTO `RolePermission` VALUES ('286859858081492992', '1', '1103');
+INSERT INTO `RolePermission` VALUES ('286859858177961984', '1', '285779921140461568');
+INSERT INTO `RolePermission` VALUES ('286904710097809408', '2', '1101');
+INSERT INTO `RolePermission` VALUES ('286904710232027136', '2', '1102');
+INSERT INTO `RolePermission` VALUES ('286904710332690432', '2', '1103');
 
 

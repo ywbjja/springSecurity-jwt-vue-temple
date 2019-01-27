@@ -12,9 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Autoor:杨文彬
@@ -23,7 +21,8 @@ import java.util.Set;
  */
 @Service
 @Slf4j
-public class RoleServiceImpl implements RoleService {
+public class RoleServiceImpl implements RoleService
+{
 
     @Autowired
     private RoleMapper roleMapper;
@@ -42,5 +41,29 @@ public class RoleServiceImpl implements RoleService {
         ArrayList list = roleMapper.getRoleListByCond(map);
         PageUtil pageData = new PageUtil(page,list);
         return new RetResult(RetCode.SUCCESS.getCode(),"查询成功",pageData);
+    }
+
+    @Override
+    public RetResult getAllRoleList(Map<String, Object> map) {
+        List<Role> roles = roleMapper.getAllRoleList();
+        List<Map<String,Object>> roleList = new ArrayList<>();
+        for (Role role :roles ){
+            Map<String,Object> map1 = new HashMap<>();
+            map1.put("id",role.getId());
+            map1.put("label",role.getRolename());
+            roleList.add(map1);
+        }
+        return new RetResult(RetCode.SUCCESS.getCode(),roleList);
+    }
+
+    @Override
+    public RetResult getRoleListByPerId(Map<String, Object> map) {
+        List<Long> ids = new ArrayList<>();
+        List<Role> roleList = roleMapper.getRoleListByPerId(Long.parseLong(map.get("per_id").toString()));
+        for (Role role : roleList) {
+            Long id = role.getId();
+            ids.add(id);
+        }
+        return new RetResult(RetCode.SUCCESS.getCode(),ids);
     }
 }

@@ -4,6 +4,7 @@ import com.example.security.entity.Permission;
 import com.example.security.entity.Role;
 import com.example.security.entity.User;
 import com.example.security.jwt.JwtTokenUtil;
+import com.example.security.mapper.PermissionMapper;
 import com.example.security.mapper.RoleMapper;
 import com.example.security.mapper.UserMapper;
 import com.example.security.service.UserService;
@@ -19,10 +20,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Author:YangWenbin
@@ -38,6 +36,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RoleMapper roleMapper;
+
+    @Autowired
+    private PermissionMapper permissionMapper;
 
 
 
@@ -92,11 +93,10 @@ public class UserServiceImpl implements UserService {
         Set<Menu> menus = new HashSet<>();
         roles.forEach( role -> {
             role.getPermissions().forEach( permission -> {
-                //这里应该type为menu的，button目前还未添加
                 if(permission.getPer_type().equals("menu")){
                     permissions.add(new Permission(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
                             permission.getPer_resource(),permission.getPer_type(),permission.getPer_icon(),permission.getPer_describe(),
-                            permission.getPer_component(),permission.getPer_sort(),permission.getChildren()));
+                            permission.getPer_component(),permission.getPer_sort(),permission.getPer_crtTime(), permission.getChildren()));
                 }
             });
         });
@@ -112,8 +112,42 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public RetResult getMenuTree(String username) {
+        List<Permission> permissions = new ArrayList<Permission>();
+        Set<Role> roles = roleMapper.selectByUserName(username);
+        roles.forEach( role -> {
+            role.getPermissions().forEach( permission -> {
+                if(permission.getPer_type().equals("menu")){
+                    permissions.add(new Permission(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
+                            permission.getPer_resource(),permission.getPer_type(),permission.getPer_icon(),permission.getPer_describe(),
+                            permission.getPer_component(),permission.getPer_sort(),permission.getPer_crtTime(), permission.getChildren()));
+                }
+            });
+        });
 
-        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功");
+        return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功",GenTree.genRoot(permissions));
+    }
+
+    public Object getAllMenuTree(List<Permission> permissionList){
+        List<Map<String,Object>> permissions = new ArrayList<>();
+        permissionList.forEach( permission -> {
+            if(permission != null) {
+                List<Permission> permissionList1 = permissionMapper.getParentMenu(permission.getPer_id());
+                //vue treeselect 需要的是{"id":"*","label":"*"}格式
+                Map<String,Object> map1 = new HashMap<>();
+                map1.put("id",permission.getPer_id());
+                map1.put("label",permission.getPer_name());
+                if( permissionList1 != null && permissionList1.size() > 0){
+                    map1.put("children",getAllMenuTree(permissionList1));
+                }
+                permissions.add(map1);
+            }
+        });
+        return permissions;
+    }
+
+    @Override
+    public List<Permission> getMenuTreeByPid(Long per_parent_id) {
+        return permissionMapper.getParentMenu(per_parent_id);
     }
 
 
