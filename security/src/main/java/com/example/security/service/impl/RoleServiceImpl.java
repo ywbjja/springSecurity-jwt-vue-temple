@@ -21,7 +21,8 @@ import java.util.*;
  */
 @Service
 @Slf4j
-public class RoleServiceImpl implements RoleService {
+public class RoleServiceImpl implements RoleService
+{
 
     @Autowired
     private RoleMapper roleMapper;
@@ -53,5 +54,16 @@ public class RoleServiceImpl implements RoleService {
             roleList.add(map1);
         }
         return new RetResult(RetCode.SUCCESS.getCode(),roleList);
+    }
+
+    @Override
+    public RetResult getRoleListByPerId(Map<String, Object> map) {
+        List<Long> ids = new ArrayList<>();
+        List<Role> roleList = roleMapper.getRoleListByPerId(Long.parseLong(map.get("per_id").toString()));
+        for (Role role : roleList) {
+            Long id = role.getId();
+            ids.add(id);
+        }
+        return new RetResult(RetCode.SUCCESS.getCode(),ids);
     }
 }

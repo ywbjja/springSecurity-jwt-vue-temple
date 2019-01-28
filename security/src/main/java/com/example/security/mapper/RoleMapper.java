@@ -22,4 +22,6 @@ public interface RoleMapper {
     ArrayList<Permission> getMenuTree(Map<String,Object> map);
 
     List<Role> getAllRoleList();
+
+    List<Role> getRoleListByPerId(Long rp_per_id);
 }

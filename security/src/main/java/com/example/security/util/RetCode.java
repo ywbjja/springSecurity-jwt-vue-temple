@@ -16,6 +16,9 @@ public enum  RetCode {
     //错误
     FALSE(404),
 
+    //无权限
+    NODEFINED(403),
+
     //内部错误
     ERROR(500);
 

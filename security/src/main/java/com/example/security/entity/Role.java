@@ -14,7 +14,7 @@ import java.util.Set;
 @Data
 public class Role {
 
-    private Integer id;
+    private Long id;
 
 
     private String rolename;
@@ -30,7 +30,7 @@ public class Role {
     public Role() {
     }
 
-    public Role(Integer id, String rolename, String roledesc, Timestamp createTime, Set<Permission> permissions) {
+    public Role(Long id, String rolename, String roledesc, Timestamp createTime, Set<Permission> permissions) {
         this.id = id;
         this.rolename = rolename;
         this.roledesc = roledesc;

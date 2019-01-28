@@ -11,5 +11,13 @@ import java.util.Map;
  * @Description：
  */
 public interface PermissionService {
-    public RetResult update(Map<String,Object> map);
+    RetResult update(Map<String,Object> map);
+
+    RetResult add(Map<String,Object> map);
+
+    RetResult queryAllMenusTree(Map<String,Object> map);
+
+    RetResult getPerIdList(Map<String,Object> map);
+
+    RetResult addRP(Map<String,Object> map);
 }

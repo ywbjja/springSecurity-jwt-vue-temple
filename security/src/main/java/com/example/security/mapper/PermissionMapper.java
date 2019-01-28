@@ -1,6 +1,7 @@
 package com.example.security.mapper;
 
 import com.example.security.entity.Permission;
+import com.example.security.entity.RolePermission;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,18 @@ import java.util.Map;
 public interface PermissionMapper {
     List<Permission> getAllMenuTree();
 
-    List<Permission> getParentMenu(Integer per_parent_id);
+    List<Permission> getParentMenu(Long per_parent_id);
 
-    Integer update(Map<String,Object> map);
+
+    Integer update(Map<String, Object> map);
+
+    Integer add(Permission permission);
+
+    List<String> getPerIdList(Long rp_role_id);
+
+    Integer addRP(RolePermission rolePermission);
+
+    Integer del(Long rp_role_id);
+
+    Integer getCount(Long rp_role_id);
 }

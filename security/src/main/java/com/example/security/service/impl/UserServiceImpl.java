@@ -93,7 +93,6 @@ public class UserServiceImpl implements UserService {
         Set<Menu> menus = new HashSet<>();
         roles.forEach( role -> {
             role.getPermissions().forEach( permission -> {
-                log.info(permission.getPer_name());
                 if(permission.getPer_type().equals("menu")){
                     permissions.add(new Permission(permission.getPer_id(),permission.getPer_parent_id(),permission.getPer_name(),
                             permission.getPer_resource(),permission.getPer_type(),permission.getPer_icon(),permission.getPer_describe(),
@@ -132,7 +131,6 @@ public class UserServiceImpl implements UserService {
         List<Map<String,Object>> permissions = new ArrayList<>();
         permissionList.forEach( permission -> {
             if(permission != null) {
-                System.out.println(permission.getPer_id());
                 List<Permission> permissionList1 = permissionMapper.getParentMenu(permission.getPer_id());
                 //vue treeselect 需要的是{"id":"*","label":"*"}格式
                 Map<String,Object> map1 = new HashMap<>();
@@ -148,7 +146,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Permission> getMenuTreeByPid(Integer per_parent_id) {
+    public List<Permission> getMenuTreeByPid(Long per_parent_id) {
         return permissionMapper.getParentMenu(per_parent_id);
     }
 

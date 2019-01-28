@@ -46,7 +46,7 @@ public interface UserService {
 
     Object getAllMenuTree(List<Permission> permissionList);
 
-    List<Permission> getMenuTreeByPid(Integer per_parent_id);
+    List<Permission> getMenuTreeByPid(Long per_parent_id);
 
 
 }

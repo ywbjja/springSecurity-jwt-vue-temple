@@ -45,4 +45,9 @@
     <select id="getAllRoleList" resultType="com.example.security.entity.Role">
         select * from Role
     </select>
+
+    <select id="getRoleListByPerId" resultType="com.example.security.entity.Role">
+        select * from Role
+        where id in (select RolePermission.rp_role_id from RolePermission where RolePermission.rp_per_id = #{rp_per_id})
+    </select>
 </mapper>
