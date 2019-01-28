@@ -68,6 +68,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .and().authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers("/auth/**").permitAll()
+                .antMatchers("/druid/**").anonymous()
                 .anyRequest().authenticated()
                 .and().headers().cacheControl();
 
