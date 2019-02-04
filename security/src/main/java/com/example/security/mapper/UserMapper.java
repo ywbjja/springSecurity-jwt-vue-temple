@@ -17,4 +17,8 @@ import java.util.Map;
 public interface UserMapper {
 
     User selectByUserName(String username);
+
+    String selectPasswordByUsername(String username);
+
+    Integer selectUserNameIsExist(String username);
 }

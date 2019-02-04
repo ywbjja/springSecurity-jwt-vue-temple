@@ -19,4 +19,12 @@
         LEFT JOIN RoleUser on RoleUser.userId = `User`.id
         LEFT JOIN Role on Role.id = RoleUser.roleId where User.username = #{username}
     </select>
+
+    <select id="selectPasswordByUsername" parameterType="String" resultType="String" >
+        select User.password from User where User.username = #{username}
+    </select>
+
+    <select id="selectUserNameIsExist" parameterType="String" resultType="Integer" >
+        select count(*) from User where User.username = #{username}
+    </select>
 </mapper>

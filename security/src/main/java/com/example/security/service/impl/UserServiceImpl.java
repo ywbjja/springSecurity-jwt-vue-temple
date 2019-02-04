@@ -18,6 +18,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -51,6 +53,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     /**
      * 获取用户信息
      * @param username
@@ -66,12 +71,23 @@ public class UserServiceImpl implements UserService {
     /**
      * 登录方法
      * @param username
-     * @param password
+     * @param passwordAES
      * @return
      * @throws AuthenticationException
      */
     @Override
-    public RetResult login(String username, String password) throws AuthenticationException {
+    public RetResult login(String username, String passwordAES) throws AuthenticationException {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String password = null;
+        password = AesEncryptUtil.decrypt(passwordAES);
+        if (username == null || passwordAES == null) {
+            return new RetResult(RetCode.FAIL.getCode(),"用户名，密码不能为空");
+        }
+        if (! (userMapper.selectUserNameIsExist(username) > 0)){
+            return new RetResult(RetCode.FAIL.getCode(),"用户名不存在，请重试");
+        }else if(!encoder.matches(password,userMapper.selectPasswordByUsername(username))) {
+            return new RetResult(RetCode.FAIL.getCode(), "密码输入不正确，请重试");
+        }
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(username, password);
         final Authentication authentication = authenticationManager.authenticate(upToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);

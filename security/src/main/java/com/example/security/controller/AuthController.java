@@ -28,7 +28,7 @@ public class AuthController {
     @RequestMapping(value = "${jwt.route.login}",method = RequestMethod.POST)
     public RetResult login(@RequestBody Map<String,Object> map){
         String username = map.get("username").toString();
-        String password = map.get("password").toString();
-        return userService.login(username,password);
+        String passwordAES = map.get("password").toString();
+        return userService.login(username,passwordAES);
     }
 }
