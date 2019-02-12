@@ -4,21 +4,20 @@ import com.example.security.entity.Permission;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 
 /**
  * @Autoor:杨文彬
  * @Date:2019/1/18
- * @Description：
+ * @Description：设置给前台用的路由菜单
  */
 @Slf4j
 public class BulidTree {
 
     public static List<Menu> genRoot(List<Permission> permissions){
 
-        List<Menu> trees = new ArrayList<Menu>();
+        List<Menu> trees = new LinkedList<Menu>();
         permissions.forEach(permission -> {
             if(permission != null){
                 List<Permission> permissionList = permission.getChildren();
@@ -53,6 +52,7 @@ public class BulidTree {
                     menu.setChildren(menuList);
                 }
                 trees.add(menu);
+
             }
 
         });

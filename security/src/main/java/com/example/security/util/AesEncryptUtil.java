@@ -131,39 +131,4 @@ public class AesEncryptUtil {
 
 
     }
-
-
-
-    public static void main(String[] args) {
-        try {
-            // byte key[] = generatorKey();
-            // 密钥必须是16的倍数
-            byte key[] = "1234567890ABCDEF1234567890ABCDEf".getBytes("utf-8");//hexStringToBytes("0123456789ABCDEF");
-            String src = "admin";
-            System.out.println("密钥:"+byteToHexString(key));
-            System.out.println("原字符串:"+src);
-
-            String enc = byteToHexString(encrypt(src, key));
-            System.out.println("加密："+enc);
-            System.out.println(decrypt(enc));
-            System.out.println("解密："+new String(decrypt(enc, key), "utf-8"));
-        } catch (InvalidKeyException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (NoSuchPaddingException e) {
-            e.printStackTrace();
-        } catch (IllegalBlockSizeException e) {
-            e.printStackTrace();
-        } catch (BadPaddingException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
 }

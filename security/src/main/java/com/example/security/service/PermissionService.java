@@ -20,4 +20,6 @@ public interface PermissionService {
     RetResult getPerIdList(Map<String,Object> map);
 
     RetResult addRP(Map<String,Object> map);
+
+    RetResult del(Map<String,Object> map);
 }

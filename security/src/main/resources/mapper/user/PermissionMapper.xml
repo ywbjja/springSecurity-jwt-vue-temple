@@ -27,12 +27,16 @@
         delete from RolePermission where rp_role_id = #{rp_role_id}
     </delete>
 
+    <delete id="delByPerid">
+        delete from Permission where per_id = #{per_id}
+    </delete>
+
     <select id="getCount" resultType="Integer">
         select count(*) from RolePermission where rp_role_id = #{rp_role_id}
     </select>
 
     <select id="getAllMenuTree" resultType="com.example.security.entity.Permission">
-        select * from Permission
+        select * from Permission order by per_sort asc
     </select>
 
     <insert id="addRP">
@@ -42,7 +46,7 @@
 
 
     <select id="getParentMenu" resultType="com.example.security.entity.Permission">
-        select * from Permission where per_parent_id = #{per_parent_id}
+        select * from Permission where per_parent_id = #{per_parent_id} order by per_sort asc
     </select>
 
     <select id="getPerIdList" resultType="String">

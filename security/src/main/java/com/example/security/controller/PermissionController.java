@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -42,6 +43,20 @@ public class PermissionController {
     @PostMapping(value = "/menus")
     public RetResult addPermisson(@RequestBody Map<String,Object> map){
         return permissionService.add(map);
+    }
+
+
+    /**
+     * 删除菜单
+     * @param per_id
+     * @return
+     */
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    @DeleteMapping(value = "/menus/{per_id}")
+    public RetResult delPermission(@PathVariable Long per_id){
+        Map<String,Object> map = new HashMap<>();
+        map.put("per_id",per_id);
+        return permissionService.del(map);
     }
 
     /**

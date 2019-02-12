@@ -3,6 +3,7 @@ package com.example.security.entity;
 import lombok.Data;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Set;
 
@@ -25,12 +26,12 @@ public class Role {
 
 
     //权限的列表
-    private Set<Permission> permissions;
+    private ArrayList<Permission> permissions;
 
     public Role() {
     }
 
-    public Role(Long id, String rolename, String roledesc, Timestamp createTime, Set<Permission> permissions) {
+    public Role(Long id, String rolename, String roledesc, Timestamp createTime, ArrayList<Permission> permissions) {
         this.id = id;
         this.rolename = rolename;
         this.roledesc = roledesc;

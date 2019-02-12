@@ -22,18 +22,33 @@ public class RoleController {
     @Autowired
     private RoleService roleService;
 
+    /**
+     * 获取角色列表
+     * @param map
+     * @return
+     */
     @PreAuthorize("hasAnyRole('ADMIN')")
     @RequestMapping(value = "/getRoleList",method = RequestMethod.POST)
     public RetResult getRoleList(@RequestBody  Map<String,Object> map){
         return roleService.getRoleListByCond(map);
     }
 
+    /**
+     * 获取全部角色列表
+     * @param map
+     * @return
+     */
     @PreAuthorize("hasAnyRole('ADMIN')")
     @RequestMapping(value = "/getAllRoleList",method = RequestMethod.POST)
     public RetResult getAllRoleList(@RequestBody(required = false) Map<String, Object> map){
         return roleService.getAllRoleList(map);
     }
 
+    /**
+     * 根据权限id查询角色列表
+     * @param map
+     * @return
+     */
     @PreAuthorize("hasAnyRole('ADMIN')")
     @PostMapping(value = "/getRoleListByPerId")
     public RetResult getRoleListByPerId(@RequestBody(required = false) Map<String, Object> map){

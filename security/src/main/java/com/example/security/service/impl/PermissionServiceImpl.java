@@ -113,4 +113,12 @@ public class PermissionServiceImpl implements PermissionService {
         return new RetResult(RetCode.SUCCESS.getCode(), "更新成功");
     }
 
+    @Override
+    public RetResult del(Map<String,Object> map) {
+        if(map.get("per_id") == null){
+            return new RetResult(RetCode.FAIL.getCode(),"菜单id不能为空");
+        }
+        return new RetResult(RetCode.SUCCESS.getCode(),permissionMapper.delByPerid(Long.parseLong(map.get("per_id").toString())));
+    }
+
 }

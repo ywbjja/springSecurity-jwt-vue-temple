@@ -28,4 +28,6 @@ public interface PermissionMapper {
     Integer del(Long rp_role_id);
 
     Integer getCount(Long rp_role_id);
+
+    Integer delByPerid(Long per_id);
 }

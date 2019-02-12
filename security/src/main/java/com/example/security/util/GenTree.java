@@ -18,7 +18,7 @@ public class GenTree {
      * @return
      */
     public static List<Permission> genRoot(List<Permission> nodes){
-        List<Permission> root = new ArrayList<Permission>();
+        List<Permission> root = new LinkedList<Permission>();
         //遍历数据
         nodes.forEach(permission -> {
             //当父id是0的时候应该是根节点
@@ -47,7 +47,7 @@ public class GenTree {
             if(permission.getPer_id().equals(permission1.getPer_parent_id())){
                 //如果当前节点的子节点是空的则初始化，如果不为空就加进去
                 if(permission.getChildren() == null){
-                    permission.setChildren(new ArrayList<Permission>());
+                    permission.setChildren(new LinkedList<>());
                 }
                 permission.getChildren().add(genChildren(permission1,nodes));
             }

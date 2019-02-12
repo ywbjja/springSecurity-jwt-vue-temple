@@ -105,7 +105,7 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.selectByUserName(username);
         //查询出改用户下的角色和权限
         Set<Role> roles = roleMapper.selectByUserName(username);
-        List<Permission> permissions = new ArrayList<Permission>();
+        List<Permission> permissions = new LinkedList<Permission>();
         Set<Menu> menus = new HashSet<>();
         roles.forEach( role -> {
             role.getPermissions().forEach( permission -> {
@@ -143,6 +143,11 @@ public class UserServiceImpl implements UserService {
         return new RetResult(RetCode.SUCCESS.getCode(),"获取菜单树成功",GenTree.genRoot(permissions));
     }
 
+    /**
+     * 获取所有的菜单树树形表格用
+     * @param permissionList
+     * @return
+     */
     public Object getAllMenuTree(List<Permission> permissionList){
         List<Map<String,Object>> permissions = new ArrayList<>();
         permissionList.forEach( permission -> {
@@ -161,6 +166,11 @@ public class UserServiceImpl implements UserService {
         return permissions;
     }
 
+    /**
+     * 通过菜单id获取菜单树
+     * @param per_parent_id
+     * @return
+     */
     @Override
     public List<Permission> getMenuTreeByPid(Long per_parent_id) {
         return permissionMapper.getParentMenu(per_parent_id);
