@@ -17,6 +17,8 @@
 - [Spring Security（五）：前后端权限控制详解](https://zhuanlan.zhihu.com/p/55392971)
 - [Spring Security（六）：前端菜单，角色权限页面的搭建](https://zhuanlan.zhihu.com/p/55823589)
 - [Spring Security（七）：自定义拦截器实现对权限异常的处理](https://zhuanlan.zhihu.com/p/55900345)
+- [Spring Security（八）：Vue.js使用 CryptoJS加密密码以及BCryptPasswordEncoder的使用](https://zhuanlan.zhihu.com/p/56252316)
+- [Spring Security（九）：JWT过期刷新问题，实现十五天免登陆](https://zhuanlan.zhihu.com/p/57608281)
 
 # Getting started
 
