@@ -16,6 +16,9 @@ public enum  RetCode {
     //错误
     FALSE(404),
 
+    //token过期
+    EXPIRED(401),
+
     //无权限
     NODEFINED(403),
 

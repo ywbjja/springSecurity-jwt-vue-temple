@@ -25,13 +25,24 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     # 合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+  redis:
+    port: 6379
+    database: 0
+    host: 120.78.186.181
+    password:
+    pool:
+      max-active: 9
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 5000
 
 
 
 jwt:
   header: jwtHeader
   secret: eyJleHAiOjE1NDMyMDUyODUsInN1YiI6ImFkbWluIiwiY3JlYXRlZCI6MTU0MDYxMzI4N
-  expiration: 3600000   #毫秒
+  expiration: 120000   #毫秒
   route:
     login: /auth/login
     refresh: /auth/refresh

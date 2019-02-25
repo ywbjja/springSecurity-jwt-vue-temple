@@ -57,7 +57,6 @@ public class PermissionServiceImpl implements PermissionService {
             return new RetResult(RetCode.FAIL.getCode(),"Id,Url路径不能为空");
         }
         Permission permission = new Permission(map);
-        log.info(map.get("per_parent_id").toString());
         SnowFlake snowFlake = new SnowFlake(2,3);
         permission.setPer_id(snowFlake.nextId());
         log.info(permission.getPer_id().toString());

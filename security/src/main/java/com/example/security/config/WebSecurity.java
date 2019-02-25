@@ -86,7 +86,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         final UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration cors = new CorsConfiguration();
         cors.setAllowCredentials(true);
-        cors.addAllowedOrigin("*");
+        cors.addAllowedOrigin("http://localhost:9528");
         cors.addAllowedHeader("*");
         cors.addAllowedMethod("*");
         urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", cors);

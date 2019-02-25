@@ -24,6 +24,10 @@
         select User.password from User where User.username = #{username}
     </select>
 
+    <select id="selectUserByUsername"  resultType="com.example.security.entity.User" >
+        select * from User where User.username = #{username}
+    </select>
+
     <select id="selectUserNameIsExist" parameterType="String" resultType="Integer" >
         select count(*) from User where User.username = #{username}
     </select>

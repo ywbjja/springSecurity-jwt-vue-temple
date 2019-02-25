@@ -29,13 +29,13 @@ public class JwtUserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserMapper userMapper;
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+    public JwtUser loadUserByUsername(String s) throws UsernameNotFoundException {
 
         User user = userMapper.selectByUserName(s);
         if(user == null){
             throw new UsernameNotFoundException(String.format("'%s'.这个用户不存在", s));
         }
         List<SimpleGrantedAuthority> collect = user.getRoles().stream().map(Role::getRolename).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
-        return new JwtUser(user.getUsername(), user.getPassword(), user.getState(), collect);
+        return new JwtUser(user.getId(),user.getUsername(), user.getPassword(), user.getState(), collect);
     }
 }

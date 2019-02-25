@@ -15,6 +15,12 @@ import java.util.Set;
  */
 public interface RoleMapper {
 
+    Integer add(Role role);
+
+    Integer del(Long id);
+
+    Integer update(Map<String,Object> map);
+
     Set<Role> selectByUserName(String username);
 
     ArrayList<Role> getRoleListByCond(Map<String,Object> map);
@@ -24,4 +30,6 @@ public interface RoleMapper {
     List<Role> getAllRoleList();
 
     List<Role> getRoleListByPerId(Long rp_per_id);
+
+
 }

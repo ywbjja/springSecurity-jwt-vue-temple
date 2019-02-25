@@ -4,6 +4,7 @@ import com.example.security.entity.Permission;
 import com.example.security.entity.Role;
 import com.example.security.entity.User;
 import com.example.security.jwt.JwtTokenUtil;
+import com.example.security.jwt.JwtUser;
 import com.example.security.mapper.PermissionMapper;
 import com.example.security.mapper.RoleMapper;
 import com.example.security.mapper.UserMapper;
@@ -22,6 +23,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.*;
 
 /**
@@ -41,6 +43,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private PermissionMapper permissionMapper;
+
+    @Resource
+    private RedisUtil redisUtil;
 
 
 
@@ -91,8 +96,13 @@ public class UserServiceImpl implements UserService {
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(username, password);
         final Authentication authentication = authenticationManager.authenticate(upToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        return new RetResult(RetCode.SUCCESS.getCode(),"登录成功",jwtTokenUtil.generateToken(userDetails));
+        JwtUser userDetails = (JwtUser)userDetailsService.loadUserByUsername(username);
+        long refreshPeriodTime = 240L;
+        String jwt = jwtTokenUtil.generateToken(userDetails);
+        String userId = userMapper.selectUserByUsername(username).getId();
+        //把签发的jwt token存储到redis中，时间根绝你免登录的时间来设置
+        redisUtil.setAndTime(userId,jwt,refreshPeriodTime);
+        return new RetResult(RetCode.SUCCESS.getCode(),"登录成功",jwt);
     }
 
     /**

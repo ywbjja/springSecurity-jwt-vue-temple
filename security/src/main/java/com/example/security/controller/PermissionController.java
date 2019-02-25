@@ -18,6 +18,7 @@ import java.util.Map;
  */
 @Slf4j
 @RestController
+@CrossOrigin(origins = "*", allowCredentials= "true")
 public class PermissionController {
 
     @Autowired

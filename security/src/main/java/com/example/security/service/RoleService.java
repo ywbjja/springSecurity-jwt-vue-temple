@@ -19,4 +19,10 @@ public interface RoleService {
     RetResult getAllRoleList(Map<String,Object> map);
 
     RetResult getRoleListByPerId(Map<String,Object> map);
+
+    RetResult addRoleById(Map<String,Object> map);
+
+    RetResult delRoleById(Map<String,Object> map);
+
+    RetResult updateById(Map<String,Object> map);
 }

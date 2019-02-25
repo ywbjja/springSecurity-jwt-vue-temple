@@ -50,4 +50,23 @@
         select * from Role
         where id in (select RolePermission.rp_role_id from RolePermission where RolePermission.rp_per_id = #{rp_per_id})
     </select>
+
+    <insert id="add">
+        insert into Role (id,rolename,roledesc,createTime) values (#{id},#{rolename},#{roledesc},#{createTime})
+    </insert>
+
+    <delete id="del">
+        delete from Role where id = #{id}
+    </delete>
+
+    <update id="update">
+        update Role
+        <set>
+            <if test="rolename != null">rolename=#{rolename},</if>
+            <if test="roledesc != null">roledesc=#{roledesc},</if>
+            <if test="createTime != null">createTime=#{createTime},</if>
+        </set>
+        where id=#{id}
+    </update>
+
 </mapper>

@@ -21,4 +21,6 @@ public interface UserMapper {
     String selectPasswordByUsername(String username);
 
     Integer selectUserNameIsExist(String username);
+
+    User selectUserByUsername(String username);
 }
