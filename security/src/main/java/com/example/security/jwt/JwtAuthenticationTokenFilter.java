@@ -52,7 +52,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) {
         String authHeader = request.getHeader(jwtTokenUtil.getHeader());
         try {
             if (authHeader != null && StringUtils.isNotEmpty(authHeader)) {
@@ -117,7 +117,11 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 RetResult retResult = new RetResult(RetCode.EXPIRED.getCode(),"抱歉，您的登录信息已过期，请重新登录");
                 response.setContentType("application/json;charset=utf-8");
                 response.setCharacterEncoding("UTF-8");
-                response.getWriter().write(JSON.toJSONString(retResult));
+                try {
+                    response.getWriter().write(JSON.toJSONString(retResult));
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
                 System.out.println("redis过期");
             }
         } catch (ServletException e) {

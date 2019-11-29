@@ -81,15 +81,15 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         registry.requestMatchers(CorsUtils::isPreFlightRequest).permitAll();
     }
 
-    @Bean
-    public CorsFilter corsFilter() {
-        final UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
-        final CorsConfiguration cors = new CorsConfiguration();
-        cors.setAllowCredentials(true);
-        cors.addAllowedOrigin("http://localhost:9528");
-        cors.addAllowedHeader("*");
-        cors.addAllowedMethod("*");
-        urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", cors);
-        return new CorsFilter(urlBasedCorsConfigurationSource);
-    }
+//    @Bean
+//    public CorsFilter corsFilter() {
+//        final UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
+//        final CorsConfiguration cors = new CorsConfiguration();
+//        cors.setAllowCredentials(true);
+//        cors.addAllowedOrigin("https://vue.antywb.com/api_v1");
+//        cors.addAllowedHeader("*");
+//        cors.addAllowedMethod("*");
+//        urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", cors);
+//        return new CorsFilter(urlBasedCorsConfigurationSource);
+//    }
 }
