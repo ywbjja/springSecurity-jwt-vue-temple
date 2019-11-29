@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://49.234.106.44:3306/admin?serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true
-    username: interview
-    password: 123456
+    url: 
+    username: 
+    password: 
   redis:
     #数据库索引
     database: 4
