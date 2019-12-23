@@ -74,8 +74,8 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `Permission`;
 CREATE TABLE `Permission` (
-  `per_id` int(11) NOT NULL,
-  `per_parent_id` int(11) DEFAULT NULL,
+  `per_id` bigint(11) NOT NULL,
+  `per_parent_id` bigint(11) DEFAULT NULL,
   `per_name` varchar(100) DEFAULT NULL COMMENT '权限名称',
   `per_resource` varchar(100) DEFAULT NULL COMMENT '权限资源',
   `per_type` varchar(100) DEFAULT NULL COMMENT '权限类型',
@@ -83,6 +83,7 @@ CREATE TABLE `Permission` (
   `per_describe` varchar(100) DEFAULT NULL COMMENT '权限描述',
   `per_component` varchar(255) DEFAULT NULL,
   `per_sort` int(11) DEFAULT NULL,
+  `per_crtTime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`per_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -90,7 +91,7 @@ CREATE TABLE `Permission` (
 -- Records of Permission
 -- ----------------------------
 INSERT INTO `Permission` VALUES ('1101', '0', '权限管理', 'auth', 'menu', 'auth', '权限管理菜单', '', '1', '2019-01-24 10:04:22');
-INSERT INTO `Permission` VALUES ('1102', '1101', '角色管理', 'role', 'menu', 'role', '角色管理菜单', 'pre/role/index', '101', '2019-01-27 11:59:49');
+INSERT INTO `Permission` VALUES ('1102', '1101', '角色管理', 'role', 'menu', 'role', '角色管理菜单', 'pre/role/index', '101', '2019-04-18 16:05:03');
 INSERT INTO `Permission` VALUES ('1103', '1101', '资源管理', 'per', 'menu', 'resource', '资源管理菜单', 'pre/perm/index', '102', '2019-01-22 10:51:43');
 INSERT INTO `Permission` VALUES ('285779921140461568', '1101', '角色权限', 'roleauth', 'menu', 'roleauth', null, 'pre/roleauth/index', '104', '2019-01-24 12:29:52');
 
