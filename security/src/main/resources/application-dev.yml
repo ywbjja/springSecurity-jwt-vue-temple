@@ -7,8 +7,8 @@ spring:
   redis:
     #数据库索引
     database: 4
-    host: 49.234.106.44
-    port: 6380
+    host: 
+    port: 
     password:
     jedis:
       pool:
