@@ -20,6 +20,9 @@
 - [Spring Security（八）：Vue.js使用 CryptoJS加密密码以及BCryptPasswordEncoder的使用](https://zhuanlan.zhihu.com/p/56252316)
 - [Spring Security（九）：JWT过期刷新问题，实现十五天免登陆](https://zhuanlan.zhihu.com/p/57608281)
 
+### 持续集成
+- [Drone + Docker + Gogs实现持续集成](https://zhuanlan.zhihu.com/p/108842332)
+
 # Getting started
 
 ```
