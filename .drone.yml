@@ -1,0 +1,77 @@
+kind: pipeline
+name: Spring_Vue_Template
+
+
+# 通过配置Maven 打包Jar文件
+steps:
+- name: Maven compile
+  image: maven
+  pull: if-not-exists
+  volumes:
+  - name: cache
+    path: /root/.m2
+  commands:
+    - mvn clean package -Dmaven.test.skip=true
+
+# 获取得到上面Maven构建成功的Jar包然后根据.Dockerfile来构建Docker镜像（我这里是推送到了私人镜像仓库中）
+- name: Docker build
+  image: docker:latest
+  pull: if-not-exists
+  volumes:
+  - name: docker
+    path: /var/run/docker.sock
+  commands:
+    - docker version
+    - docker login -u ***  --password *** ***.***
+    - time docker build -f Dockerfile -t ***/***:latest .
+    - time docker push ***/***:latest
+    - docker system prune -f
+
+# 这里使用了一个SSH工具重新运行新镜像
+- name: Ssh commands
+  image: appleboy/drone-ssh
+  pull: if-not-exists
+  settings:
+    host: ***
+    username: username
+    repo: ${org_secret}
+    password:
+      from_secret: ${secret_name}
+    port: 22
+    script:
+      - echo ====暂停容器开始=======
+      - docker stop `docker ps -a| grep ${镜像名} | awk '{print $1}' `
+      - docker rm -f `docker ps -a| grep ${镜像名} | awk '{print $1}' `
+      - docker rmi $(docker images | grep "none" | awk '{print $3}')
+      - echo ====开始部署=======
+      - docker run -detach --publish 8086:8086 --name=${镜像名}  --restart=always ${仓库地址}:latest
+      - echo ====部署成功======
+
+# 发送构建结果到钉钉上(可选)
+- name: DingTalk notification
+  image: guoxudongdocker/drone-dingtalk
+  pull: if-not-exists
+  settings:
+    repo: ${org_secret}
+    token:
+      from_secret: ${secret_name}
+    type: markdown
+    message_color: true
+    message_pic: true
+    sha_link: true
+  when:
+    status: [failure, success]
+
+# 缓存
+volumes:
+- name: cache
+  host:
+    # path: /tmp/cache/.m2
+    path: /var/lib/cache # The path be used in the host.
+- name: docker
+  host:
+    path: /var/run/docker.sock
+# 当master分支有代码提交时,回触发Drone工作
+trigger:
+  branch:
+  - master
